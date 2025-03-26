@@ -1,18 +1,33 @@
+"use client";
 import {
-    FaFacebookF,
-    FaInstagram,
-    FaLinkedinIn,
-    FaRegEnvelope,
-    FaTwitter,
-    FaYoutube,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaRegEnvelope,
+  FaRegUser,
+  FaTwitter,
+  FaWhatsapp,
+  FaYoutube,
 } from "react-icons/fa";
-import { FiPhoneCall } from "react-icons/fi";
+import { FiMenu, FiPhoneCall } from "react-icons/fi";
 import Link from "next/link";
+import { BsCart2 } from "react-icons/bs";
+import { IoMdCall } from "react-icons/io";
+import { RxCross1 } from "react-icons/rx";
+
+import { FaArrowRightLong } from "react-icons/fa6";
+import { GrMenu } from "react-icons/gr";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleSidebar } from "../store/slice/sidebar";
 
 const Topbar = () => {
-    return (
-        <>
-            <div className="topbar hidden lg:block bg-[#62371f] text-white text-[14px] px-28 py-1 border-b-2 border-b-white">
+  const dispatch = useDispatch();
+  const isOpen = useSelector((state) => state.sidebar.isOpen);
+
+  console.log(isOpen);
+  return (
+    <>
+      {/* <div className="topbar hidden lg:block bg-[#62371f] text-white text-[14px] px-28 py-1 border-b-2 border-b-white">
                 <div className="px-0 sm:px-6 md:px-10  xl:px-5 lg:px-24 mx-auto">
                     <div className="flex flex-col md:flex-row justify-between items-center py-2">
                         <div className="flex space-x-4 items-center mb-2 md:mb-0 ">
@@ -83,9 +98,55 @@ const Topbar = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </>
-    );
+            </div> */}
+
+      <div className="flex justify-between lg:justify-between items-center px-5 md:px-12 xl:px-32 py-2 md:py-4">
+        <img
+          src="/images/logo.png"
+          alt=""
+          className="w-[30%] block md:max-w-[11%]"
+        />
+
+        <div className="flex items-center gap-x-5">
+          <div className="hidden lg:flex items-center  gap-x-4">
+            <a href="#" className="flex items-center gap-x-2 font-semibold">
+              {" "}
+              <IoMdCall className="text-green-500 text-2xl" /> 12345679888
+            </a>
+            <a href="#" className="flex items-center gap-x-2 font-semibold">
+              <FaWhatsapp className="text-green-500 text-2xl" /> 12345679888
+            </a>
+            <span>|</span>
+          </div>
+          <div className="flex items-center gap-x-4">
+            <button className="hidden lg:flex items-center gap-x-2 bg-[#62371f] px-4 py-2 font-semibold text-white rounded group transition-all duration-300">
+              Get your trial Pack
+              <span className="  translate-x-0 opacity-50 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2">
+                <FaArrowRightLong />
+              </span>
+            </button>
+
+            <button className="flex items-center gap-x-2">
+              <FaRegUser className="text-2xl" /> login
+            </button>
+            <button className="hidden md:flex items-center gap-x-2 relative">
+              {" "}
+              <BsCart2 className="text-2xl" /> cart{" "}
+              <span className="bg-red-500 text-xs flex items-center justify-center text-white rounded-full w-6 h-6 absolute -top-4 left-4">
+                1
+              </span>{" "}
+            </button>
+            <button
+              onClick={() => dispatch(toggleSidebar())}
+              className=" lg:hidden text-2xl"
+            >
+              {isOpen ? <RxCross1 /> : <GrMenu />}
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Topbar;

@@ -3,8 +3,11 @@ import Navbar from "./Components/Navbar";
 import Topbar from "./Components/Topbar";
 import "./globals.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-
+import { Provider } from "react-redux";
+import store from "./store/store";
+import ReduxProvider from "./store/ReduxProvider";
 export default function RootLayout({ children }) {
+    
   return (
     <html lang="en">
       <head>
@@ -15,10 +18,12 @@ export default function RootLayout({ children }) {
     />
       </head>
       <body>
+        <ReduxProvider>
         <Topbar />
         <Navbar />
         {children}
-        <Footer />
+        {/* <Footer /> */}
+        </ReduxProvider>
       </body>
     </html>
   );

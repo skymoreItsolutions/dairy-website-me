@@ -12,6 +12,10 @@ import BenefitsSection from "./Components/BenefitsSection";
 import PopularCategories from "./Components/PopularCategories";
 import { BannerSection } from "./Components/BannerSection";
 import BlogCardGrid from "./Components/BlogCardGrid";
+import HeroSection from "./Components/HeroSection";
+import FarmFreshProducts from "./Components/FarmFreshProducts";
+import Offers from "./Components/Offers";
+import MainHeroSection from "./Components/MainHeroSection";
 
 const page = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -34,15 +38,21 @@ const page = () => {
         <PopupForm isOpen={isPopupOpen} closePopup={closePopup} />
       </div> */}
         
-        <BannerSection/>
-      <BenefitsSection />
+        {/* <BannerSection/> */}
+        <MainHeroSection/>
+        <HeroSection/>
+        <FarmFreshProducts/>
+        <Offers/>
+      {/* <BenefitsSection />
       <PopularCategories />
       <Herotop />
       <BlogSection />
-      <Contribution />
+      <Contribution /> */}
 
-      {/* <LatestNews /> */}
-      <BlogCardGrid/>
+
+      {/* not */}
+      {/* <LatestNews /> */} 
+      {/* <BlogCardGrid/> */}
     </>
   );
 };

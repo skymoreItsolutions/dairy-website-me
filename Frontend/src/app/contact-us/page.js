@@ -31,13 +31,34 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F5F5] py-12 px-4 sm:px-6 lg:px-8">
+
+    <>
+    
+
+    <div
+    className="relative w-full h-[350px] bg-cover bg-center"
+    style={{ backgroundImage: "url('/images/aboutus.webp')" }}
+  >
+
+    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+
+    <div className="absolute inset-0 flex items-center justify-center">
+      <h2 className="text-white text-3xl md:text-5xl font-bold">Contact Us</h2>
+    </div>
+  </div>
+    <div className="h-auto bg-[#F5F5F5] py-12 px-4 sm:px-6 lg:px-8">
+
+   
+
+
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-[#5D4037] text-center mb-12">Contact Us</h1>
-        
+
+
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
+      
+          <div className="bg-white rounded-lg h-[450px]  shadow-lg p-8">
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-[#5D4037]">Full Name</label>
@@ -117,17 +138,17 @@ const ContactUs = () => {
             </form>
           </div>
 
-          {/* Contact Information */}
+        
           <div className="space-y-8">
-            <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="bg-white rounded-lg  shadow-lg p-8">
               <h2 className="text-2xl font-semibold text-[#5D4037] mb-6">Contact Information</h2>
-              
+
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <FaMapMarkerAlt className="text-[#795548] text-xl" />
                   <p className="text-gray-600">123 Business Street, New York, NY 10001</p>
                 </div>
-                
+
                 <div className="flex items-center space-x-3">
                   <FaPhone className="text-[#795548] text-xl" />
                   <p className="text-gray-600">+1 (555) 123-4567</p>
@@ -181,6 +202,8 @@ const ContactUs = () => {
         </div>
       </div>
     </div>
+
+  </>
   );
 };
 

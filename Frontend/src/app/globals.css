@@ -34,6 +34,7 @@
   background: linear-gradient(90deg, #003f72 11%, #fd5d14);
 }
 
+
 .overview__thumb::before {
   content: "";
   position: absolute;
@@ -412,4 +413,16 @@
   font-size: 18px;
   line-height: 28px;
   color: #61371f;
+}
+
+.add-before-back::after{
+  content: '';
+  width: 450px;
+  height: 450px;
+ position: absolute;
+ top: 23%;
+ right:7%;
+ z-index: -1;
+ border-radius: 10px;
+  background-color: #62371f;
 }

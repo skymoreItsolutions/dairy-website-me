@@ -323,13 +323,13 @@ export default function page() {
           {sortedProducts.map((product) => (
             <div
               key={product.id}
-              className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 relative h-auto" // Increased height
+              className="bg-[#F2F4F7] h-[300px] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 relative " // Increased height
             >
-              <div className="w-full h-auto flex items-center justify-center">
+              <div className="w-full flex items-center justify-center">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-[80%] h-[350px]  object-fill"
+                  className="w-full h-32 "
                 />
               </div>
 
@@ -345,7 +345,7 @@ export default function page() {
               )}
               <div className="p-6 flex flex-col justify-between h-[190px]">
                 {" "}
-                {/* Adjusted padding and height */}
+     
                 <div>
                   <h3 className="text-lg font-semibold text-[#8B4513] mb-2">
                     {product.name}
@@ -364,15 +364,7 @@ export default function page() {
                         ₹{product.originalPrice}
                       </span>
                     </div>
-                    {/* <button
-                      onClick={() => {
-                        setSelectedProduct(product);
-                        setIsQuickViewOpen(true);
-                      }}
-                      className="text-[#8B4513] hover:text-[#D2B48C] text-sm font-semibold"
-                    >
-                      Quick View
-                    </button> */}
+                   
                   </div>
                   <button
                     onClick={() => addToCart(product)}

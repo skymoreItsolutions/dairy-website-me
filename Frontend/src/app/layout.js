@@ -2,6 +2,7 @@ import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Topbar from "./Components/Topbar";
 import "./globals.css";
+import "./fonts.css"
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Provider } from "react-redux";
 import store from "./store/store";

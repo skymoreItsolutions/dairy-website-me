@@ -16,6 +16,8 @@ import HeroSection from "./Components/HeroSection";
 import FarmFreshProducts from "./Components/FarmFreshProducts";
 import Offers from "./Components/Offers";
 import MainHeroSection from "./Components/MainHeroSection";
+import HealtySection from "./Components/HealtySection";
+import HeartSays from "./Components/HeartSays";
 
 const page = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -43,6 +45,9 @@ const page = () => {
         <HeroSection/>
         <FarmFreshProducts/>
         <Offers/>
+        <HealtySection/>
+        <HeartSays/>
+      {/* <SliderImage /> */}
       {/* <BenefitsSection />
       <PopularCategories />
       <Herotop />

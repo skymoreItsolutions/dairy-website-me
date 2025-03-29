@@ -235,7 +235,7 @@ export default function Navbar() {
         },
       ],
     },
-    { label: "Our Farms", link: "/our-farms" },
+    // { label: "Our Farms", link: "/our-farms" },
     { label: "Blogs", link: "/blogs" },
     { label: "Contact Us", link: "/contact-us" },
   ];

@@ -7,25 +7,18 @@ import { Pagination, Autoplay } from "swiper/modules";
 export default function HeroSection() {
   const sweiperImg = [
     {
-      img: "https://pravarshaindustries.com/storage/banners/2mbP6fGBb87KqrjS9JKfGYABhJuClDz6PfGA7axD.png",
+      img: "/images/banner/Gaualla3.webp",
     },
     {
-      img: "https://pravarshaindustries.com/storage/banners/2mbP6fGBb87KqrjS9JKfGYABhJuClDz6PfGA7axD.png",
-    },
-    {
-      img: "https://pravarshaindustries.com/storage/banners/2mbP6fGBb87KqrjS9JKfGYABhJuClDz6PfGA7axD.png",
-    },
-    {
-      img: "https://pravarshaindustries.com/storage/banners/2mbP6fGBb87KqrjS9JKfGYABhJuClDz6PfGA7axD.png",
-    },
-    {
-      img: "https://pravarshaindustries.com/storage/banners/2mbP6fGBb87KqrjS9JKfGYABhJuClDz6PfGA7axD.png",
+      img: "/images/banner/Gaualla4.webp",
     },
   ];
+  
   return (
     <div className="px-5 md:px-12 xl:px-32 py-5 md:py-10">
-      <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 lg:min-h-[400px]">
-        <div className="w-full lg:w-[60%] flex-grow">
+      <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-10">
+        {/* Left Section */}
+        <div className="w-full lg:w-[60%] flex-grow h-full">
           <Swiper
             pagination={{ clickable: true }}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -34,30 +27,31 @@ export default function HeroSection() {
             className="w-full h-full"
           >
             {sweiperImg.map((img, index) => (
-              <SwiperSlide key={index} className="h-full">
+              <SwiperSlide key={index} className="h-full py-4 md:py-10">
                 <img
                   src={img.img}
                   alt=""
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full max-h-[500px] rounded-lg"
                 />
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
 
-        <div className="w-full hidden lg:flex lg:w-[30%] flex-col gap-4">
+        {/* Right Section */}
+        <div className="w-full lg:w-[30%] flex flex-col gap-4 h-full">
           <div className="h-1/2">
             <img
               src="https://pravarshaindustries.com/storage/banners/8RMnh6dus8t0h0pLEKWh0itHnmd09MdNl6VZN0kr.png"
               alt=""
-              className="w-full h-full  rounded-lg"
+              className="w-full h-full object-cover rounded-lg"
             />
           </div>
           <div className="h-1/2">
             <img
               src="https://pravarshaindustries.com/storage/banners/zmOVga9kVNmsscYPpcM0QaQPpnGmj9litUULOd40.png"
               alt=""
-              className="w-full h-full  rounded-lg"
+              className="w-full h-full object-cover rounded-lg"
             />
           </div>
         </div>

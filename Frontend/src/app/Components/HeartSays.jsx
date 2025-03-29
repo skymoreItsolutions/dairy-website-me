@@ -50,7 +50,7 @@ export default function HeartSays() {
       <div className="px-5 md:px-12 xl:px-32  py-5 md:py-10 ">
         <div className="text-center w-full lg:w-[70%] mx-auto">
           <h2 className="text-2xl md:text-3xl lg:text-4xl italic  font-bold ">
-            Our Heart Says Swadeshi
+            Our Heart Says Gaualla
           </h2>
           <p className="text-base md:text-lg mt-2 ">
             Hamara doodh shuddh Bharatiya gaayon se prapt hota hai, jo poshak

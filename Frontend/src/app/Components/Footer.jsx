@@ -1,59 +1,184 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
-import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube, FaTwitter } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
+import { FaFacebook } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
+
+ 
   return (
-    <footer className="bg-brown-900  px-5 lg:px-28 py-10">
-      {/* Logo Section */}
-      <div className="flex justify-center lg:justify-start mb-6">
-        <img   src="/images/logo.png"  alt="Company Logo" width={150} height={50} />
-      </div>
+    <footer className="relative   bg-[url(https://el.commonsupport.com/newwp/hankcok/wp-content/uploads/2020/07/sketch-3.jpg)] text-white pt-10  px-5 md:px-12 xl:px-32">
 
-      <hr className="bg-gray-500 my-6 h-[2px]" />
+    <div className="absolute inset-0 bg-[#62371f] opacity-45"></div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-        {/* Quick Links */}
-        <div>
-          <h2 className="text-lg font-semibold mb-4">Quick Links</h2>
-          <ul className="space-y-2">
-            <li><Link href="/story" className="hover:text-yellow-300">About Us</Link></li>
-            <li><Link href="/privacy-policy" className="hover:text-yellow-300">Privacy Policy</Link></li>
-            <li><Link href="/terms-conditions" className="hover:text-yellow-300">Terms & Conditions</Link></li>
-            <li><Link href="/faq" className="hover:text-yellow-300">FAQs</Link></li>
-            <li><Link href="/contact-us" className="hover:text-yellow-300">Contact Us</Link></li>
-          </ul>
-        </div>
+      <div className="relative z-20">
+      <div className="container mx-auto">
+        <div className="flex flex-col lg:flex-row gap-y-10  justify-between mb-8">
+          <div className="space-y-4 lg:w-[30%]">
+            <Link href="/" className="">
+            <img
+          src="/images/logo.png"
+          alt=""
+          className="w-[30%] block md:max-w-[20%]"
+        />
+            </Link>
+            <p className="mt-4">
+            "At Gaualla Thata, we combine purity with tradition to deliver fresh, wholesome dairy products that embody natural goodness and exceptional quality."
+            </p>
+            <div className="flex items-center text-xl gap-x-2">
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+              >
+                <RiInstagramFill className="text-2xl" />
+              </a>
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+              >
+                <FaFacebook className="text-2xl" />
+              </a>
+              <a
+                href="https://www.twitter.com"
+                target="_blank"
+              >
+                <FaTwitter className="text-2xl" />
+              </a>
+              <a
+                href="https://www.youtube.com"
+                target="_blank"
+              >
+                <FaYoutube className="text-2xl" />
+              </a>
+            </div>
+          </div>
 
-        {/* Address Section */}
-        <div>
-          <h2 className="text-lg font-semibold mb-4">Contact Us</h2>
-          <p className="text-sm text-gray-300">Beejapuri Dairy Private Limited</p>
-          <p className="text-sm text-gray-300">1234, Dairy Street, New Delhi, India</p>
-          <p className="text-sm text-gray-300">Email: support@countrydelight.com</p>
-          <p className="text-sm text-gray-300">Phone: +91 98765 43210</p>
-        </div>
+          <div className="space-y-2 hidden lg:block">
+            <h2 className="text-xl -ml-4 ">Our Links</h2>
+            <ul className="space-y-2 list-disc">
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
+                <Link href="/blogs">Blogs</Link>
+              </li>
+              <li>
+                <Link href="/about">About</Link>
+              </li>
+              <li>
+                <Link href="/contact-us/">Contact Us</Link>
+              </li>
+            </ul>
+          </div>
 
-        {/* Social Media Links */}
-        <div className="flex flex-col items-center md:items-start">
-          <h2 className="text-lg font-semibold mb-4">Follow Us</h2>
-          <div className="flex space-x-4">
-            <Link href="https://www.facebook.com/" target="_blank"><FaFacebook className="text-2xl hover:text-blue-500" /></Link>
-            <Link href="https://www.instagram.com/" target="_blank"><FaInstagram className="text-2xl hover:text-pink-500" /></Link>
-            <Link href="https://www.linkedin.com/" target="_blank"><FaLinkedin className="text-2xl hover:text-blue-700" /></Link>
-            <Link href="https://www.youtube.com/" target="_blank"><FaYoutube className="text-2xl hover:text-red-600" /></Link>
-            <Link href="https://twitter.com/" target="_blank"><FaTwitter className="text-2xl hover:text-blue-400" /></Link>
+          <div className="space-y-2 hidden lg:block">
+            <h2 className="text-xl -ml-4 ">Our Products</h2>
+
+            <ul className="space-y-2 hidden lg:block list-disc">
+              <li>
+                <Link href="#">Milk</Link>
+              </li>
+              <li>
+                <Link href="#">Ghee</Link>
+              </li>
+              <li>
+                <Link href="#">Panner</Link>
+              </li>
+             
+              <li>
+                <Link href="#">combo</Link>
+              </li>
+            
+            </ul>
+          </div>
+
+          <div className="grid grid-cols-2 lg:hidden pl-4 ">
+            <div className="space-y-2 ">
+              <h2 className="text-xl -ml-4 ">Our Links</h2>
+              <ul className="space-y-2 list-disc">
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
+                <Link href="/blogs">Blogs</Link>
+              </li>
+              <li>
+                <Link href="/about">About</Link>
+              </li>
+              <li>
+                <Link href="/contact-us/">Contact Us</Link>
+              </li>
+              </ul>
+            </div>
+
+            <div className="space-y-2">
+              <h2 className="text-xl -ml-4 ">Our Prodcuts</h2>
+
+              <ul className="space-y-2  list-disc">
+              <li>
+                <Link href="/collections/rings">Rings</Link>
+              </li>
+              <li>
+              <Link href="/collections/earrings">Earrings</Link>
+              </li>
+              <li>
+              <Link href= "/collections/necklaces">Necklaces</Link>
+              </li>
+              <li>
+              <Link href="/collections/bracelets">Bracelets</Link>
+              </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="space-y-2 lg:w-[35%] xl:w-[30%] flex flex-col items-start ">
+            <h2 className="text-xl  ">Our Address</h2>
+
+            <h6>Head Office</h6>
+            <p>#Gaualla dummay address adeded,Delhi,1111122 India</p>
+            <div className="flex flex-col gap-y-2 ">
+              <a href="tel:+91 12345 6789">+91 12345 6789</a>
+              <a href="mailto:info@Gaualla.com">info@Gaualla.com</a>
+            </div>
+
+            {/* <div className="flex justify-start  mt-5">
+              <img
+                src="/img/payments/Payements.webp"
+                alt="Logo"
+                className="h-[30px]"
+              />
+            </div> */}
           </div>
         </div>
       </div>
 
-      <hr className="bg-gray-500 my-6 h-[2px]" />
-
-      {/* Disclaimer */}
-      <div className="text-center text-sm text-gray-400">
-        <p>© 2025 Beejapuri Dairy Private Limited. All Rights Reserved.</p>
-        <p>Prices, availability, and offers may change based on location.</p>
+      <hr className="text-gray-400" />
+      <div className="py-5 container mx-auto ">
+        <div className="md:flex flex-wrap lg:justify-between items-center text-sm text-white justify-center md">
+          <p className="text-center">
+            © {new Date().getFullYear()} Gaualla . All rights reserved.
+          </p>
+          <p className="">
+            <span className="flex md justify-center md">
+              Designed by&nbsp;
+              <a
+                href="https://www.futuretouch.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+                Skymore IT Solutions  ❤️
+              </a>
+            </span>
+          </p>
+          <div className="space-x-4 mb-2 md:mb-0  flex md justify-center md">
+            <Link href="/privacy-Policy">Privacy Policy |</Link>
+            <Link href="/terms-condition">Terms & Conditions |</Link>
+          </div>
+        </div>
+      </div>
       </div>
     </footer>
   );

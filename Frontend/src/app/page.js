@@ -18,6 +18,10 @@ import Offers from "./Components/Offers";
 import MainHeroSection from "./Components/MainHeroSection";
 import HealtySection from "./Components/HealtySection";
 import HeartSays from "./Components/HeartSays";
+import Testmonials from "./Components/Testmonials";
+import WhyCoose from "./Components/WhyCoose";
+import GalleryInfo from "./Components/GalleryInfo";
+import LatestBlog from "./Components/LatestBlog";
 
 const page = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -47,6 +51,10 @@ const page = () => {
         <Offers/>
         <HealtySection/>
         <HeartSays/>
+        <LatestBlog/>
+        <Testmonials/>
+        <WhyCoose/>
+        <GalleryInfo/>
       {/* <SliderImage /> */}
       {/* <BenefitsSection />
       <PopularCategories />

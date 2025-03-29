@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         <Topbar />
         <Navbar />
         {children}
-        {/* <Footer /> */}
+        <Footer />
         </ReduxProvider>
       </body>
     </html>

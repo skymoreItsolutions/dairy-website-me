@@ -101,20 +101,23 @@ const Topbar = () => {
             </div> */}
 
       <div className="flex justify-between lg:justify-between items-center px-5 md:px-12 xl:px-32 py-2 md:py-4">
-        <img
+          
+          <Link href='/'  className=" block" >
+          <img
           src="/images/logo.png"
           alt=""
-          className="w-[30%] block md:max-w-[11%]"
+          className="h-[70px]"
         />
+          </Link>
 
         <div className="flex items-center gap-x-5">
           <div className="hidden lg:flex items-center  gap-x-4">
             <a href="#" className="flex items-center gap-x-2 font-semibold">
               {" "}
-              <IoMdCall className="text-green-500 text-2xl" /> 12345679888
+              <IoMdCall className="text-green-500 text-2xl" /> +91 8378 000052
             </a>
             <a href="#" className="flex items-center gap-x-2 font-semibold">
-              <FaWhatsapp className="text-green-500 text-2xl" /> 12345679888
+              <FaWhatsapp className="text-green-500 text-2xl" /> +91 8378 000052
             </a>
             <span>|</span>
           </div>

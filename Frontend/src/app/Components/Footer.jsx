@@ -41,18 +41,18 @@ const Footer = () => {
               >
                 <FaFacebook className="text-2xl" />
               </a>
-              <a
+              {/* <a
                 href="https://www.twitter.com"
                 target="_blank"
               >
                 <FaTwitter className="text-2xl" />
-              </a>
-              <a
+              </a> */}
+              {/* <a
                 href="https://www.youtube.com"
                 target="_blank"
               >
                 <FaYoutube className="text-2xl" />
-              </a>
+              </a> */}
             </div>
           </div>
 

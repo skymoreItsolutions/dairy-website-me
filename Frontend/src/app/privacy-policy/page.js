@@ -5,7 +5,19 @@ import { FaAngleDoubleRight } from "react-icons/fa";
 const PrivacyPolicy = () => {
   return (
     <>
-      <div
+        <div
+    className="relative w-full h-[250px] lg:h-[350px] bg-cover bg-center"
+    style={{ backgroundImage: "url('/images/aboutus.webp')" }}
+  >
+
+    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+
+    <div className="absolute inset-0 flex items-center justify-center">
+      <h2 className="text-white text-3xl md:text-5xl font-bold capitalize">Privacy  policy</h2>
+    </div>
+  </div>
+      {/* <div
         className="site-breadcrumb"
         style={{ backgroundImage: "url('/images/service-slider.webp')" }}
       >
@@ -27,61 +39,48 @@ const PrivacyPolicy = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </div> */}
 
       <section className="privacy-policy py-16 mx-0 lg:mx-28">
-        <div className="container mx-auto px-4">
-          <div className="single-privacy">
-            <h3 className="text-2xl text-[#62371f] font-bold mt-0">
-              Welcome to US cargo packers and movers Privacy Policy
-            </h3>
-            <p className="text-justify mt-4">
-              At US cargo packers and movers, we value the trust you place in us
-              very highly, and we take all necessary precautions with respect to
-              your privacy. Here, in this Privacy Policy, you will know what
-              data we collect from you and how we use it and protect it when you
-              use any of our services or visit us.
-            </p>
-            <p className="text-justify mt-4">
-              One of the personal particulars we collect to facilitate a
-              'smooth,' 'unified,' and ''effective'' moving experience is name,
-              address, phone number, e-mail address, payment information,
-              identity documents, and much more. In addition, we may collect
-              service-specific data such as delivery and pickup addresses and
-              even a list of the goods requiring transportation. Otherwise, we
-              might collect nonpersonal data such as IP address, device type,
-              browser type, cookies, and several other things to enhance your
-              experience on our website.
-            </p>
-            <p className="text-justify mt-4">
-              It is essential not to misuse electricity because anything we
-              gather will only ever be used based on the back-to-back dealings
-              with you. Payment handling, move arrangements, order processing,
-              and improvement of our offerings are included in these purposes.
-              Additionally, such information may be used to correspond with the
-              customers regarding queries, remarks, or improvements in diverse
-              services. If consent is obtained, we might also send surveys and
-              additional promotional messages to gain a better understanding of
-              your needs.
-            </p>
+  <div className="container mx-auto px-4">
+    <div className="single-privacy">
+      <h3 className="text-2xl text-[#62371f] font-bold mt-0">
+        Welcome to Gaualla Milk Pvt Ltd Privacy Policy
+      </h3>
+      <p className="text-justify mt-4">
+        At Gaualla Milk Pvt Ltd, we highly value the trust you place in us, and we are committed to ensuring your privacy. This Privacy Policy explains the types of data we collect from you, how we use it, and how we protect it when you use our services or visit our website.
+      </p>
+      <p className="text-justify mt-4">
+        The personal information we collect to offer a smooth and efficient experience includes your name, address, phone number, email address, payment details, identity documents, and more. Additionally, we may collect service-specific data such as delivery addresses, product preferences, and specific dairy product requirements. We may also collect non-personal data such as IP addresses, device types, browser information, cookies, and other elements to improve your experience on our website.
+      </p>
+      <p className="text-justify mt-4">
+        It is important to note that we will never misuse your information. Any information we gather is only used to process payments, arrange deliveries, improve our services, and enhance your overall experience. Furthermore, we may use your information to communicate with you about any queries, suggestions, or improvements related to our products and services. With your consent, we may send you surveys, promotions, and offers to better understand your preferences.
+      </p>
 
-            <h3 className="text-xl font-semibold text-[#62371f] mt-8">
-              You can visit the majority of our website without providing any
-              personal information
-            </h3>
-            <p className="text-justify mt-4">
-            Our firm has employed the conventional ways of protecting private information. To prevent unauthorized access, these precautions also utilize encryption technologies and secure servers. Nevertheless, we would always emphasize exercising diligence when providing delicate information over the internet, even though we put so much effort into securing these data.
-            </p>
+      <h3 className="text-xl font-semibold text-[#62371f] mt-8">
+        You can visit the majority of our website without providing any personal information
+      </h3>
+      <p className="text-justify mt-4">
+        You can browse our website without providing personal details. However, certain services may require you to share your information to ensure an efficient experience with our dairy products.
+      </p>
 
-            <h3 className="text-xl font-semibold text-[#62371f] mt-8">
-              Security
-            </h3>
-            <p className="text-justify mt-4">
-            You may view, change or delete your personal information anytime. You may also limit how your data is processed or refuse to get marketing emails. To exercise these rights or with any inquiries about privacy please contact us at [insert contact information]. Cookies and similar technologies are used on our website to personalize and enhance your browsing experience. Cookies allow us to analyze website performance and tailor content for you. If you do not wish to take advantage of cookies, cookie usage can be disabled in your browser settings.
-            </p>
-          </div>
-        </div>
-      </section>
+      <h3 className="text-xl font-semibold text-[#62371f] mt-8">
+        Security
+      </h3>
+      <p className="text-justify mt-4">
+        We employ standard security measures to protect your personal data. These include encryption technologies and secure servers to prevent unauthorized access. While we take significant steps to safeguard your information, we always encourage you to remain cautious when providing sensitive information over the internet.
+      </p>
+
+      <h3 className="text-xl font-semibold text-[#62371f] mt-8">
+        Your Rights Regarding Your Personal Information
+      </h3>
+      <p className="text-justify mt-4">
+        You have the right to view, modify, or delete your personal information at any time. Additionally, you can limit how your data is processed or opt out of marketing emails. To exercise these rights or if you have any privacy-related inquiries, please contact us at [insert contact information]. We also use cookies and similar technologies to personalize your browsing experience on our website. Cookies allow us to analyze website performance and provide content that best suits your preferences. If you prefer not to use cookies, you can disable them through your browser settings.
+      </p>
+    </div>
+  </div>
+</section>
+
     </>
   );
 };

@@ -427,3 +427,19 @@
  border-radius: 10px;
   background-color: #62371f;
 }
+
+@media (max-width:768px) {
+
+  .add-before-back::after {
+    content: '';
+    width: 335px;
+    height: 319px;
+    position: absolute;
+    top: 23%;
+    right: 7%;
+    z-index: -1;
+    border-radius: 10px;
+    background-color: #62371f;
+}
+  
+}

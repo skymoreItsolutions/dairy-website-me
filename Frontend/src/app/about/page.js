@@ -3,13 +3,33 @@
 import Image from 'next/image';
 
 const AboutUs = () => {
+  const products = [
+
+    { name: "A2 Ghee", img: "/images/cowmilk.jpeg", desc: "Pure A2 ghee made from desi cow milk, rich in nutrients and essential fatty acids." },
+    { name: "A2 Binola Ghee", img: "/images/ghee1.png", desc: "Premium A2 binola ghee, enhancing taste and promoting better digestion and overall health." },
+    { name: "A2 Desi Cow Milk", img: "/images/bufalomilk.jpeg", desc: "Fresh organic A2 desi cow milk, rich in calcium and essential vitamins for strong bones." },
+    { name: "Standard Milk", img: "/images/cowmilk.jpeg", desc: "Nutritious, high-quality standard milk, ensuring essential protein and energy for daily consumption." },
+    { name: "A2 Paneer", img: "/images/a2-paneer.png", desc: "Soft, fresh A2 paneer, packed with protein and made from pure, organic A2 milk." },
+    { name: "Natural Raw Honey", img: "/images/honey-1.png", desc: "Pure, unprocessed natural raw honey, rich in antioxidants and natural enzymes for better health." },
+
+
+    // { name: "A2 Ghee", img: "/images/cowmilk.jpeg", desc: "Pure and healthy A2 ghee made from desi cow milk." },
+    // { name: "A2 Binola Ghee", img: "/images/ghee1.png", desc: "Premium A2 binola ghee for better health and taste." },
+    // { name: "A2 Desi Cow Milk", img: "/images/bufalomilk.jpeg", desc: "Fresh and organic A2 desi cow milk." },
+    // { name: "Standard Milk", img: "/images/cowmilk.jpeg", desc: "Nutritious and high-quality standard milk." },
+    // { name: "A2 Paneer", img: "/images/a2-paneer.png", desc: "Soft and fresh A2 paneer made from pure milk." },
+    // { name: "A2 Dahi", img: "/images/a2-dahi.jpg", desc: "Thick and creamy A2 dahi for a healthy gut." },
+    // { name: "A2 Butter", img: "/images/a2-butter.jpg", desc: "Rich and smooth A2 butter made with love." },
+    // // { name: "A2 Hara Lassi", img: "/images/a2-hara-lassi.jpg", desc: "Refreshing and natural A2 hara lassi." },
+    // { name: "Natural Raw Honey", img: "/images/honey-1.png", desc: "Pure and unprocessed natural raw honey." },
+  ]
   return (
 
 
     <div>
 
       <div
-        className="relative w-full h-[350px] bg-cover bg-center"
+        className="relative w-full h-[250px] lg:h-[350px] bg-cover bg-center"
         style={{ backgroundImage: "url('/images/aboutus.webp')" }}
       >
 
@@ -21,110 +41,119 @@ const AboutUs = () => {
         </div>
       </div>
 
-
-      <div className='w-full mt-5  gap-3 grid grid-cols-2 px-20 p-5'>
-
-
-        <div className='w-full h-[650px] relative p-20 add-before-back '>
-
-          <img className='w-full h-full' src='/images/about_img.png' />
-
-
-
+      <div className="w-full mt-5 gap-3 grid grid-cols-1 md:grid-cols-2 px-5 md:px-20 p-5">
+        {/* Image Section */}
+        <div className="w-full h-[400px] md:h-[650px] relative p-5 md:p-20 add-before-back flex items-center justify-center">
+          <img className="w-full h-full object-cover rounded-lg shadow-lg" src="/images/about_img.png" alt="About Gaualla Milk" />
         </div>
 
+        {/* Text Content */}
+        <div className="w-full h-auto md:h-[650px] flex flex-col justify-center  lg:p-5 text-[#777]">
+          <h2 className="text-2xl text-center lg:text-left  md:text-4xl text-black font-bold my-4">
+            Welcome to Gaualla Milk
+          </h2>
 
-        <div className='w-full h-[650px] flex flex-col justify-center p-5 text-[#777]'>
-
-          <h2 className="text-3xl md:text-4xl text-black font-bold mb-4">Welcome to Gaualla Milk</h2>
-
-          <p className="text-lg leading-relaxed">
+          <p className="text-base md:text-lg leading-relaxed">
             At <span className="font-semibold">Gaualla Milk</span>, we are committed to bringing you the purest and most nutritious A2-certified Desi Cow milk straight from our ethically raised indigenous cows. Our mission is to promote a healthier lifestyle by providing antibiotic-free, chemical-free, and adulteration-free dairy products.
           </p>
 
-          <p className="text-lg leading-relaxed mt-4">
+          <p className="text-base md:text-lg leading-relaxed mt-4">
             Our cows are nurtured with natural green fodder and wholesome diets, ensuring they produce milk that is rich in nutrients and full of goodness. We take pride in maintaining the traditional dairy farming culture, where purity and freshness are our top priorities.
           </p>
 
-          <p className="text-lg leading-relaxed mt-4">
+          <p className="text-base md:text-lg leading-relaxed mt-4">
             At Gaualla Milk, we believe in sustainable farming. We enrich our soil using desi cow manure and use holy cow urine for natural pest control, ensuring that our dairy products remain 100% organic, fresh, and free from harmful chemicals.
           </p>
 
-          <p className="text-lg leading-relaxed mt-4">
+          <p className="text-base md:text-lg leading-relaxed mt-4">
             Experience the richness of pure Desi Cow milk and dairy products, delivered fresh to your doorstep. Choose Gaualla Milk for unmatched purity and health benefits!
           </p>
-
         </div>
-
-
-
       </div>
 
-      <div className="w-full px-28  ">
-        <p className="text-lg text-gray-700">
+
+      <div className="w-full px-5 lg:px-28  ">
+        <p className="text-base md:text-lg text-[#777] leading-relaxed">
           At <span className="font-semibold">Gaualla Milk</span>, we ensure that all our personnel and Gausevaks follow strict hygiene protocols, using gloves and masks to maintain the highest safety standards. Our Vedic Gaushala is fully equipped and environment-friendly, ensuring that every drop of milk retains its purity.
           We embrace eco-friendly packaging to provide you with a sense of security and a farm-to-door experience, encouraging a sustainable way of living.
         </p>
       </div>
 
       <div className="w-full mt-10 py-16 px-6 bg-green-100">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
-        
-        {/* Left - Image */}
-        <div className="relative w-full h-[400px] overflow-hidden rounded-lg shadow-lg">
-          <img 
-            src="/images/mission.jpg"
-            alt="Our Mission"
-            layout="fill"
-            objectFit="cover"
-            className="hover:scale-105 transition-transform duration-500"
-          />
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+
+
+          <div className="relative w-full h-[400px] overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="/images/mission.jpg"
+              alt="Our Mission"
+              layout="fill"
+              objectFit="cover"
+              className="hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+
+
+          <div className="text-gray-800">
+            <h2 className="text-4xl font-bold mb-4">Our Mission</h2>
+            <p className="text-lg leading-relaxed">
+              At <span className="font-semibold">Gaualla Milk</span>, our mission is to deliver pure, organic, and A2-certified Desi Cow milk straight from our farms to your home.
+              We aim to promote sustainable and ethical dairy farming while preserving our traditional Vedic farming methods.
+            </p>
+            <p className="text-lg leading-relaxed mt-4">
+              Through responsible farming practices and eco-friendly solutions, we ensure that our cows are nurtured with 100% natural fodder and ethical care, providing
+              you with the freshest and healthiest milk.
+            </p>
+          </div>
+
         </div>
-
-
-        <div className="text-gray-800">
-          <h2 className="text-4xl font-bold mb-4">Our Mission</h2>
-          <p className="text-lg leading-relaxed">
-            At <span className="font-semibold">Gaualla Milk</span>, our mission is to deliver pure, organic, and A2-certified Desi Cow milk straight from our farms to your home.
-            We aim to promote sustainable and ethical dairy farming while preserving our traditional Vedic farming methods.
-          </p>
-          <p className="text-lg leading-relaxed mt-4">
-            Through responsible farming practices and eco-friendly solutions, we ensure that our cows are nurtured with 100% natural fodder and ethical care, providing
-            you with the freshest and healthiest milk.
-          </p>
-        </div>
-
       </div>
-       </div>
 
-       <div className="w-full py-16 px-6 bg-blue-100">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+      <div className="w-full py-16 px-6 bg-blue-100">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
 
 
-        <div className="text-gray-800">
-          <h2 className="text-4xl font-bold mb-4">Our Vision</h2>
-          <p className="text-lg leading-relaxed">
-            Our vision at <span className="font-semibold">Gaualla Milk</span> is to revive the purity of Desi Cow dairy farming and bring back the ancient, unadulterated taste of milk.  
-            We believe in sustainable living, protecting indigenous cow breeds, and promoting organic dairy consumption as a way of life.
-          </p>
-          <p className="text-lg leading-relaxed mt-4">
-            By integrating modern technology with traditional farming methods, we strive to create a world where health, sustainability, and ethical dairy farming go hand in hand.
-          </p>
+          <div className="text-gray-800">
+            <h2 className="text-4xl font-bold mb-4">Our Vision</h2>
+            <p className="text-lg leading-relaxed">
+              Our vision at <span className="font-semibold">Gaualla Milk</span> is to revive the purity of Desi Cow dairy farming and bring back the ancient, unadulterated taste of milk.
+              We believe in sustainable living, protecting indigenous cow breeds, and promoting organic dairy consumption as a way of life.
+            </p>
+            <p className="text-lg leading-relaxed mt-4">
+              By integrating modern technology with traditional farming methods, we strive to create a world where health, sustainability, and ethical dairy farming go hand in hand.
+            </p>
+          </div>
+
+
+          <div className="relative w-full h-[400px] overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="/images/vision.jpg"
+              alt="Our Vision"
+              layout="fill"
+              objectFit="cover"
+              className="hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+
         </div>
-
-        
-        <div className="relative w-full h-[400px] overflow-hidden rounded-lg shadow-lg">
-          <img 
-            src="/images/vision.jpg"
-            alt="Our Vision"
-            layout="fill"
-            objectFit="cover"
-            className="hover:scale-105 transition-transform duration-500"
-          />
-        </div>
-
       </div>
-    </div>
+
+
+      <div className="container mx-auto mt-10 p-8">
+        <h2 className="text-3xl font-bold text-center mb-8">Our Product Portfolio</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {products.map((product, index) => (
+            <div key={index} className="border rounded-2xl shadow-lg p-4 text-center transition-transform transform hover:scale-105">
+              <div className="relative w-full ">
+                <img src={product.img} alt={product.name} layout="fill" objectFit="cover" className="rounded-t-lg" />
+              </div>
+              <h3 className="text-xl font-semibold mt-4">{product.name}</h3>
+              <p className="text-gray-600 mt-2">{product.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
 
 
 

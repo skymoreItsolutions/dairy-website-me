@@ -9,11 +9,12 @@ const Footer = () => {
 
  
   return (
-    <footer className="relative   bg-[url(https://el.commonsupport.com/newwp/hankcok/wp-content/uploads/2020/07/sketch-3.jpg)] text-white pt-10  px-5 md:px-12 xl:px-32">
+    <footer className="relative   text-white pt-10  px-5 md:px-12 xl:px-32">
 
-    <div className="absolute inset-0 bg-[#62371f] opacity-45"></div>
+    <div className="absolute z-10 inset-0 bg-black/70 "></div>
+    <div className="absolute   bg-[url('/images/footer/1.webp')] bg-cover bg-no-repeat inset-0  "></div>
 
-      <div className="relative z-20">
+      <div className="relative z-40">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row gap-y-10  justify-between mb-8">
           <div className="space-y-4 lg:w-[30%]">
@@ -29,13 +30,13 @@ const Footer = () => {
             </p>
             <div className="flex items-center text-xl gap-x-2">
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/gaualla1/"
                 target="_blank"
               >
                 <RiInstagramFill className="text-2xl" />
               </a>
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/people/Gaualla-Milk/pfbid0oAAfD3faiggskXyqdgMv7dWe7NPk4xgg8seAvZuiXhSwbv47bfSdxBXoHEEip4D3l/"
                 target="_blank"
               >
                 <FaFacebook className="text-2xl" />
@@ -118,16 +119,17 @@ const Footer = () => {
 
               <ul className="space-y-2  list-disc">
               <li>
-                <Link href="/collections/rings">Rings</Link>
+                <Link href="#">Milk</Link>
               </li>
               <li>
-              <Link href="/collections/earrings">Earrings</Link>
+                <Link href="#">Ghee</Link>
               </li>
               <li>
-              <Link href= "/collections/necklaces">Necklaces</Link>
+                <Link href="#">Panner</Link>
               </li>
+             
               <li>
-              <Link href="/collections/bracelets">Bracelets</Link>
+                <Link href="#">combo</Link>
               </li>
               </ul>
             </div>
@@ -137,9 +139,9 @@ const Footer = () => {
             <h2 className="text-xl  ">Our Address</h2>
 
             <h6>Head Office</h6>
-            <p>#Gaualla dummay address adeded,Delhi,1111122 India</p>
+            <p className="capitalize">#Both No 7, pocket C ,wave estate , sector 85 , Mohali ,140306 India</p>
             <div className="flex flex-col gap-y-2 ">
-              <a href="tel:+91 12345 6789">+91 12345 6789</a>
+              <a href="tel:+918378000052">+91 8378 000052</a>
               <a href="mailto:info@Gaualla.com">info@Gaualla.com</a>
             </div>
 

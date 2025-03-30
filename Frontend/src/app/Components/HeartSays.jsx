@@ -4,45 +4,46 @@ export default function HeartSays() {
   const leftCards = [
     {
       img: "https://swadeshivip.com/assets/img/advantage1.png",
-      heading: "Antibiotic-free Milk",
-      para: "Every glass of purity contains antibiotic-free milk in the natural and original form.",
+      heading: "Fresh and Pure Organic Milk",
+      para: "Our milk is sourced from free-range cows, ensuring it's fresh, pure, and healthy every day.",
     },
     {
       img: "https://swadeshivip.com/assets/img/advantage1.png",
-      heading: "Antibiotic-free Milk",
-      para: "Every glass of purity contains antibiotic-free milk in the natural and original form.",
+      heading: "No Preservatives Added",
+      para: "We provide milk without any harmful preservatives, ensuring that it remains as natural as possible.",
     },
     {
       img: "https://swadeshivip.com/assets/img/advantage1.png",
-      heading: "Antibiotic-free Milk",
-      para: "Every glass of purity contains antibiotic-free milk in the natural and original form.",
+      heading: "Farm to Table Transparency",
+      para: "Our milk comes straight from the farm to your table, with full transparency on sourcing and quality.",
     },
     {
       img: "https://swadeshivip.com/assets/img/advantage1.png",
-      heading: "Antibiotic-free Milk",
-      para: "Every glass of purity contains antibiotic-free milk in the natural and original form.",
+      heading: "Nutrient-Rich and Fresh",
+      para: "Packed with essential nutrients, our milk provides everything you need to stay strong and healthy.",
     },
   ];
+  
   const ReftCards = [
     {
       img: "https://swadeshivip.com/assets/img/advantage1.png",
-      heading: "Antibiotic-free Milk",
-      para: "Every glass of purity contains antibiotic-free milk in the natural and original form.",
+      heading: "Eco-Friendly Packaging",
+      para: "Our packaging is fully recyclable and eco-friendly, ensuring that we contribute to environmental sustainability.",
     },
     {
       img: "https://swadeshivip.com/assets/img/advantage1.png",
-      heading: "Antibiotic-free Milk",
-      para: "Every glass of purity contains antibiotic-free milk in the natural and original form.",
+      heading: "Locally Sourced Ingredients",
+      para: "We prioritize locally sourced ingredients, supporting local farmers and ensuring the highest quality products.",
     },
     {
       img: "https://swadeshivip.com/assets/img/advantage1.png",
-      heading: "Antibiotic-free Milk",
-      para: "Every glass of purity contains antibiotic-free milk in the natural and original form.",
+      heading: "Supports Immunity Strong",
+      para: "Our organic milk is packed with vitamins and minerals to boost your immunity and overall health.",
     },
     {
       img: "https://swadeshivip.com/assets/img/advantage1.png",
-      heading: "Antibiotic-free Milk",
-      para: "Every glass of purity contains antibiotic-free milk in the natural and original form.",
+      heading: "Rich in Omega-3 benefits",
+      para: "Our milk is rich in Omega-3 fatty acids, which are essential for brain health and overall wellness.",
     },
   ];
   return (
@@ -90,7 +91,8 @@ export default function HeartSays() {
           </div>
           <div className="lg:col-span-2">
             <div className=" h-full flex items-start lg:items-center xl:items-start">
-                <img src="https://crm.swadeshivip.com/storage/images/uploads/image_20241203_115727.png" alt="" className="w-[70%]  md:w-[40%] lg:w-[80%] xl:w-[70%] mx-auto" />
+                {/* <img src="https://crm.swadeshivip.com/storage/images/uploads/image_20241203_115727.png" alt="" className="w-[70%]  md:w-[40%] lg:w-[80%] xl:w-[70%] mx-auto" /> */}
+              <img src="/images/banner/gaualla4.webp" alt="" />
             </div>
           </div>
           <div className="lg:col-span-1">
@@ -98,7 +100,7 @@ export default function HeartSays() {
               {ReftCards.map((card, index) => (
                 <div
                   key={index}
-                  className="flex lg:flex-col xl:flex-row items-center gap-4 p-4 rounded-lg shadow-2xl border border-green-500 bg-white"
+                  className="flex  lg:flex-col xl:flex-row items-center gap-4 p-4 rounded-lg shadow-2xl border border-green-500 bg-white"
                 >
                   {/* Image Section */}
                   <div className="w-[20%]">

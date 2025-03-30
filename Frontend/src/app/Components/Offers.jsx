@@ -3,13 +3,18 @@ import React from 'react'
 export default function Offers() {
     const dailyOffer = [
         {
-            img: "https://pravarshaindustries.com/storage/banners/eWUe5RHroGituig0ey2jDcLylkzE0cg978StbeBA.png"
+            // img: "https://pravarshaindustries.com/storage/banners/eWUe5RHroGituig0ey2jDcLylkzE0cg978StbeBA.png"
+            img:"/images/banner/Gaualla11.webp"
         },
         {
-            img: "https://pravarshaindustries.com/storage/banners/YaCudRvbfJgObTfYpvTHKTzsa9fan1za46HBfGOx.png"
+            // img: "https://pravarshaindustries.com/storage/banners/YaCudRvbfJgObTfYpvTHKTzsa9fan1za46HBfGOx.png"
+                   img:"/images/banner/Gaualla10.webp"
+
         },
         {
-            img: "https://pravarshaindustries.com/storage/banners/IxVUJKpmEkLStKoEjXEgUuEsZet2rC6yJFRgt702.png" // Removed extra "g"
+            // img: "https://pravarshaindustries.com/storage/banners/IxVUJKpmEkLStKoEjXEgUuEsZet2rC6yJFRgt702.png" // Removed extra "g"
+            img:"/images/banner/Gaualla11.webp"
+
         }
     ];
   

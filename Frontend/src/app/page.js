@@ -22,6 +22,7 @@ import Testmonials from "./Components/Testmonials";
 import WhyCoose from "./Components/WhyCoose";
 import GalleryInfo from "./Components/GalleryInfo";
 import LatestBlog from "./Components/LatestBlog";
+import ProductionCounter from "./Components/ProductionCounter";
 
 const page = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -54,6 +55,7 @@ const page = () => {
         <LatestBlog/>
         <Testmonials/>
         <WhyCoose/>
+        <ProductionCounter/>
 
       {/* <SliderImage /> */}
       {/* <BenefitsSection />

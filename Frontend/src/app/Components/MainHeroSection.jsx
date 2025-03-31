@@ -72,7 +72,7 @@ export default function MainHeroSection() {
              <div className=" px-5 relative text-center h-full w-full flex flex-col items-center justify-center ">
              <h2 className="text-3xl md:text-5xl  xl:text-7xl font-bold text-center">{elm.heading&& elm.heading}</h2>
              <p className="mt-4 text-center max-w-2xl">{elm.desc && elm.desc}</p>
-             <Link href="/all-product" className="hidden mt-4 lg:flex items-center gap-x-2 bg-[#5C9457] px-8 py-2 font-semibold text-lg text-white rounded group transition-all duration-300">
+             <Link href="/all-product" className="hidden mt-4 lg:flex items-center gap-x-2 bg-[#1f8018] px-8 py-2 font-semibold text-lg text-white rounded group transition-all duration-300">
               View all prodcust
               
             </Link>

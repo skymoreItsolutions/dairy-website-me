@@ -189,7 +189,7 @@ import { FaYoutube } from "react-icons/fa";
 export default function Footer() {
   return (
     <>
-      <section className="bg-[#355e32] py-10 md:py-16 lg:pb-0 lg:pt-18 relative">
+      <section className="bg-[#355e32] pt-24 pb-10  sm:py-10 md:py-16 lg:pb-0 lg:pt-18 relative">
         <img
           src="/images/footer/newbg.png"
           alt="footer-bg"

@@ -7,6 +7,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Provider } from "react-redux";
 import store from "./store/store";
 import ReduxProvider from "./store/ReduxProvider";
+import PhoneFixCall from "./Components/PhoneFixCall";
 export default function RootLayout({ children }) {
     
   return (
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
+        <PhoneFixCall/>
         </ReduxProvider>
       </body>
     </html>

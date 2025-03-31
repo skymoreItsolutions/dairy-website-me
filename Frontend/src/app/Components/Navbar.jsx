@@ -343,10 +343,13 @@ export default function Navbar() {
 
   return (
     <>
-      <div className={`hidden lg:block px-5  md:px-12 xl:px-32  w-full  py-4  ${fixed ? "lg:fixed top-0 z-[40] bg-[#62371F] text-white":" bg-[#62371f] text-white"}`}>
+      <div className={`hidden lg:block px-5  md:px-12 xl:px-32  w-full  py-4  ${fixed ? "lg:fixed top-0 z-[40] bg-[#fff] text-black shadow":" bg-[#62371f] text-white"}`}>
       <div className={`hidden lg:flex items-center justify-between  relative `}>
-      <img src="/images/logo.png" alt="" className={`w-[30%]  md:max-w-[8%] ${fixed?"inline-block":"hidden"}`} />
-      <ul className={`flex items-center  gap-x-5 ${fixed?"xl:absolute left-[50%] xl:-translate-x-[60%]":"text-white"}`}>
+      <Link href="/" className={`${fixed?"block":"hidden"}`}>
+      <img src="/images/logo.png" alt="" className={`w-[30%]  md:max-w-[12%] ${fixed?"inline-block":"hidden"}`} />
+
+      </Link>
+      <ul className={`flex items-center  gap-x-5 ${fixed?"lg:absolute left-[50%] lg:-translate-x-[60%]":"text-white"}`}>
           {navLinks.map((elm, index) => (
             <li key={index} className="relative lg:text-sm xl:text-base font-bold">
               {elm.productList ? (
@@ -383,7 +386,7 @@ export default function Navbar() {
                   )} */}
                 </>
               ) : (
-                <Link href={elm.link} className="hover:text-gray-600 text-nowrap">
+                <Link href={elm.link} className={`${fixed?"hover:text-gray-500":"hover:text-gray-200"}  text-nowrap`}>
                   {elm.label}
                 </Link>
               )}
@@ -391,15 +394,15 @@ export default function Navbar() {
           ))}
         </ul>
         <div className="relative w-[350px]">
-          <input
-            type="text"
-            placeholder="Search product..."
-            className="w-full py-2 pl-4 pr-12 border border-amber-950 rounded-lg focus:outline-none "
-          />
-          <button className="absolute right-0 top-0 h-full w-[40px] flex items-center justify-center bg-[#7bb471] text-white rounded-r-lg">
-            <FiSearch className="w-5 h-5" />
-          </button>
-        </div>
+  <input
+    type="text"
+    placeholder="Search product..."
+    className="w-full py-2 pl-4 pr-12 border border-amber-950 rounded-lg focus:outline-none  transition duration-300 ease-in-out text-gray-700"
+  />
+  <button className="absolute shadow-2xl right-0 top-0 h-full w-[40px] flex items-center justify-center bg-[#1f8018] text-white rounded-r-lg hover:bg-[#159a10] transition-all duration-200 ease-in-out transform hover:scale-105">
+    <FiSearch className="w-5 h-5" />
+  </button>
+</div>
       </div>
 
 

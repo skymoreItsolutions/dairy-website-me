@@ -19,12 +19,52 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { GrMenu } from "react-icons/gr";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleSidebar } from "../store/slice/sidebar";
+import { useState } from "react";
 
 const Topbar = () => {
   const dispatch = useDispatch();
   const isOpen = useSelector((state) => state.sidebar.isOpen);
 
   console.log(isOpen);
+
+
+  const userLinkList = [
+    {
+      link: "/user/login",
+      name: "login",
+    },
+    {
+      link: "/user/sign-up",
+      name: "sign-up",
+    },
+    {
+      link: "/user/profile",
+      name: "profile",
+    },
+  ];
+
+  const [userLinkToggle, setUserLinkToggle] = useState(false);
+
+  const UserLinks = () => {
+    return (
+      <ul
+        onMouseLeave={() => setUserLinkToggle(false)}
+        className="bg-white shadow-lg rounded-lg w-[150px] p-2 absolute z-10 -right-10 top-8 border border-gray-300"
+      >
+        {userLinkList.map((elm, index) => (
+          <li key={index} className="px-4 py-2 hover:bg-gray-100 rounded-md">
+            <Link
+              href={elm.link}
+              className="block uppercase text-gray-700 text-base"
+            >
+              {elm.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    );
+  };
+
   return (
     <>
       {/* <div className="topbar hidden lg:block bg-[#62371f] text-white text-[14px] px-28 py-1 border-b-2 border-b-white">
@@ -106,18 +146,18 @@ const Topbar = () => {
           <img
           src="/images/logo.png"
           alt=""
-          className="h-[70px]"
+          className="h-[60px] object-cover object-center"
         />
           </Link>
 
         <div className="flex items-center gap-x-5">
           <div className="hidden lg:flex items-center  gap-x-4">
-            <a href="#" className="flex items-center gap-x-2 font-semibold">
+            <a href="tel:+918378000052" className=" flex px-4 py-2 rounded group transition-all duration-300  text-white items-center gap-x-2 font-semibold bg-[#1f8018] hover:bg-[#2a8e23]">
               {" "}
-              <IoMdCall className="text-green-500 text-2xl" /> +91 8378 000052
+              <IoMdCall className=" text-2xl animate-bounce" /> +91 8378 000052
             </a>
-            <a href="#" className="flex items-center gap-x-2 font-semibold">
-              <FaWhatsapp className="text-green-500 text-2xl" /> +91 8378 000052
+            <a href="tel:+918378000052" className="flex px-4 py-2 rounded group transition-all duration-300  text-white items-center gap-x-2 font-semibold bg-[#1f8018] hover:bg-[#2a8e23]">
+              <FaWhatsapp className=" text-2xl animate-bounce " /> +91 8378 000052
             </a>
             <span>|</span>
           </div>
@@ -129,12 +169,24 @@ const Topbar = () => {
               </span>
             </button>
 
-            <button className="flex items-center gap-x-2">
-              <FaRegUser className="text-2xl" /> login
-            </button>
-            <button className="hidden md:flex items-center gap-x-2 relative">
+            {/* <button className="flex items-center gap-x-2 font-semibold">
+              <FaRegUser className="text-xl " /> Login
+              </button> */}
+              <div className="relative hidden lg:block ">
+              <button
+                onMouseEnter={() => setUserLinkToggle(true)}
+                className="relative justify-center flex items-center gap-x-2 font-semibold"
+              >
+                <FaRegUser className="hidden lg:block  text-3xl lg:text-xl cursor-pointer" />
+                Login
+                {userLinkToggle && <UserLinks />}
+              </button>
+            </div>
+
+
+            <button className="hidden md:flex items-center gap-x-2 relative font-semibold">
               {" "}
-              <BsCart2 className="text-2xl" /> cart{" "}
+              <BsCart2 className="text-xl " /> 
               <span className="bg-red-500 text-xs flex items-center justify-center text-white rounded-full w-6 h-6 absolute -top-4 left-4">
                 1
               </span>{" "}

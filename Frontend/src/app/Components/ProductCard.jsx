@@ -44,7 +44,7 @@ export default function ProductCard({product}) {
         </div>
 
         <Link href={`/product-detail/${product.title.split(" ").join("-").toLowerCase()}`}
-          className="w-full text-center mt-3 md:mt-4 gap-x-2 bg-[#5C9457] px-5 py-1.5 md:px-8 md:py-2 
+          className="w-full text-center mt-3 md:mt-4 gap-x-2 bg-[#1f8018] px-5 py-1.5 md:px-8 md:py-2 
                      font-semibold text-sm md:text-lg text-white rounded 
                      group transition-all duration-300 hover:bg-[#4A7D46] 
                      hover:scale-105 hover:shadow-lg"

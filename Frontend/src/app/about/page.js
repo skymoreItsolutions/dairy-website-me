@@ -1,6 +1,7 @@
 
 'use client'
 import Image from 'next/image';
+import OurObjective from '../Components/OurObjective';
 
 const AboutUs = () => {
   const products = [
@@ -41,7 +42,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="w-full mt-5 gap-3 grid grid-cols-1 md:grid-cols-2 px-5 md:px-20 p-5">
+      <div className="w-full mt-5 gap-3 grid grid-cols-1 md:grid-cols-2 px-5 md:px-12 xl:px-32 p-5">
         {/* Image Section */}
         <div className="w-full h-[400px] md:h-[650px] relative p-5 md:p-20 add-before-back flex items-center justify-center">
           <img className="w-full h-full object-cover rounded-lg shadow-lg" src="/images/about_img.png" alt="About Gaualla Milk" />
@@ -72,15 +73,15 @@ const AboutUs = () => {
       </div>
 
 
-      <div className="w-full px-5 lg:px-28  ">
+      <div className="w-full px-5 md:px-12 xl:px-32  ">
         <p className="text-base md:text-lg text-[#777] leading-relaxed">
           At <span className="font-semibold">Gaualla Milk</span>, we ensure that all our personnel and Gausevaks follow strict hygiene protocols, using gloves and masks to maintain the highest safety standards. Our Vedic Gaushala is fully equipped and environment-friendly, ensuring that every drop of milk retains its purity.
           We embrace eco-friendly packaging to provide you with a sense of security and a farm-to-door experience, encouraging a sustainable way of living.
         </p>
       </div>
 
-      <div className="w-full mt-10 py-16 px-6 bg-green-100">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+      <div className="w-full mt-10 py-16 px-5 md:px-12 xl:px-32 bg-green-100">
+        <div className=" grid grid-cols-1 md:grid-cols-2 items-center gap-10">
 
 
           <div className="relative w-full h-[400px] overflow-hidden rounded-lg shadow-lg">
@@ -109,8 +110,8 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="w-full py-16 px-6 bg-blue-100">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+      <div className="w-full py-16  px-5 md:px-12 xl:px-32 bg-blue-100">
+        <div className=" grid grid-cols-1 md:grid-cols-2 items-center gap-10">
 
 
           <div className="text-gray-800">
@@ -139,7 +140,10 @@ const AboutUs = () => {
       </div>
 
 
-      <div className="container mx-auto mt-10 p-8">
+      <OurObjective/>
+
+
+      <div className="container mx-auto px-5 md:px-12 xl:px-32 mt-10 p-8">
         <h2 className="text-3xl font-bold text-center mb-8">Our Product Portfolio</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {products.map((product, index) => (

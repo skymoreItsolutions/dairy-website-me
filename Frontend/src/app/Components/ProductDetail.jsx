@@ -51,7 +51,7 @@ export default function ProductDetail({ product }) {
     },
     {
       img: "/images/banner/Gaualla3.webp",
-      title: "Fresh Paneer",
+      title: "Fresh Milk",
       quantity: "500g",
       description: "Soft and fresh paneer, perfect for your favorite dishes.",
       price: "₹200",

@@ -66,7 +66,7 @@ export default function FarmFreshProducts() {
                     className="h-[200px] w-[200px] sm:h-[150px] sm:w-[150px] rounded-full bg-[#4b2b1910] flex items-center justify-center transition-transform duration-300 hover:scale-105 shadow-md"
                   >
                     <img
-                      src={item.src}
+                      src='https://placehold.co/100'
                       alt={item.alt}
                       className="w-[70%] h-[70%] lg:h-[75%] lg:w-[75%] rounded-full  object-contain object-center"
                     />

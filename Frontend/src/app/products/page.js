@@ -80,7 +80,7 @@ export default function page() {
     },
     {
       id: 4,
-      name: "Fresh Paneer",
+      name: "Pure Cow Ghee",
       category: "paneer",
       price: 320,
       originalPrice: 400,

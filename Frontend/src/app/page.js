@@ -54,7 +54,7 @@ const page = () => {
         <LatestBlog/>
         <Testmonials/>
         <WhyCoose/>
-        <GalleryInfo/>
+
       {/* <SliderImage /> */}
       {/* <BenefitsSection />
       <PopularCategories />

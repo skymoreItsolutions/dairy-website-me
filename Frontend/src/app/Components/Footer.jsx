@@ -182,7 +182,7 @@
 "use client";
 import Link from "next/link";
 import { RiInstagramFill } from "react-icons/ri";
-import { FaFacebook } from "react-icons/fa";
+import { FaEnvelope, FaFacebook, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 
@@ -394,16 +394,16 @@ export default function Footer() {
               </div>
 
               <h6 className="text-lg text-[#b0b9ae]">Location</h6>
-              <p className="capitalize text-sm md:text-base">
-                #Both No 7, Pocket C, Wave Estate, Sector 85, Mohali, 140306, India
+              <p className="capitalize text-sm md:text-base flex items-start gap-x-2">
+              <FaMapMarkerAlt className="text-xl mt-1"/>    #Both No 7, Pocket C, Wave Estate, Sector 85, Mohali, 140306, India
               </p>
 
-              <div className="flex mt-4 flex-col gap-y-2">
-                <a href="tel:+918378000052" className="text-sm md:text-base">
-                  +91 8378 000052
+              <div className="flex flex-col mt-4 gap-y-2">
+                <a href="tel:+918378000052" className="text-sm md:text-base flex items-start gap-x-2">
+                <FaPhone className="text-lg mt-1"/>  +91 8378 000052
                 </a>
-                <a href="mailto:info@Gaualla.com" className="text-sm md:text-base">
-                  info@Gaualla.com
+                <a href="mailto:info@Gaualla.com" className="text-sm md:text-base flex items-start gap-x-2">
+                 <FaEnvelope className="text-lg mt-1"/>  info@Gaualla.com
                 </a>
               </div>
             </div>

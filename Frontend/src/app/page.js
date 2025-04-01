@@ -23,6 +23,7 @@ import WhyCoose from "./Components/WhyCoose";
 import GalleryInfo from "./Components/GalleryInfo";
 import LatestBlog from "./Components/LatestBlog";
 import ProductionCounter from "./Components/ProductionCounter";
+import GetApp from "./Components/GetApp";
 
 const page = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -55,6 +56,7 @@ const page = () => {
         <LatestBlog/>
         <Testmonials/>
         <WhyCoose/>
+        <GetApp/>
         <ProductionCounter/>
 
       {/* <SliderImage /> */}

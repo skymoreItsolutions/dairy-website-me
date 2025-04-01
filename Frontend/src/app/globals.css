@@ -451,7 +451,7 @@
 
 
 .phone-icon {
-  width: 12%;
+  /* width: 12%; */
   animation: jump 2.5s ease-in-out infinite;
   transition: transform 0.3s ease; /* Smooth transition */
 }

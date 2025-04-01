@@ -20,6 +20,7 @@ import { GrMenu } from "react-icons/gr";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleSidebar } from "../store/slice/sidebar";
 import { useState } from "react";
+import ShoppingCart from "./ShoppingCart";
 
 const Topbar = () => {
   const dispatch = useDispatch();
@@ -49,13 +50,13 @@ const Topbar = () => {
     return (
       <ul
         onMouseLeave={() => setUserLinkToggle(false)}
-        className="bg-white shadow-lg rounded-lg w-[150px] p-2 absolute z-10 -right-10 top-8 border border-gray-300"
+        className="bg-white shadow-lg rounded-lg w-[150px] p-2 absolute z-10 -right-10 top-10 border border-gray-300"
       >
         {userLinkList.map((elm, index) => (
           <li key={index} className="px-4 py-2 hover:bg-gray-100 rounded-md">
             <Link
               href={elm.link}
-              className="block uppercase text-gray-700 text-base"
+              className="block uppercase text-gray-700 text-xs font-semibold "
             >
               {elm.name}
             </Link>
@@ -65,6 +66,8 @@ const Topbar = () => {
     );
   };
 
+
+  const [cart,setCart]=useState(false)
   return (
     <>
       {/* <div className="topbar hidden lg:block bg-[#62371f] text-white text-[14px] px-28 py-1 border-b-2 border-b-white">
@@ -184,7 +187,7 @@ const Topbar = () => {
             </div>
 
 
-            <button className="hidden md:flex items-center gap-x-2 relative font-semibold">
+            <button  onClick={()=>setCart(true)} className="hidden md:flex items-center gap-x-2 relative font-semibold">
               {" "}
               <BsCart2 className="text-xl " /> 
               <span className="bg-red-500 text-xs flex items-center justify-center text-white rounded-full w-6 h-6 absolute -top-4 left-4">
@@ -200,6 +203,7 @@ const Topbar = () => {
           </div>
         </div>
       </div>
+      <ShoppingCart setCart={setCart} cart={cart}/>
     </>
   );
 };

@@ -70,78 +70,7 @@ const Topbar = () => {
   const [cart,setCart]=useState(false)
   return (
     <>
-      {/* <div className="topbar hidden lg:block bg-[#62371f] text-white text-[14px] px-28 py-1 border-b-2 border-b-white">
-                <div className="px-0 sm:px-6 md:px-10  xl:px-5 lg:px-24 mx-auto">
-                    <div className="flex flex-col md:flex-row justify-between items-center py-2">
-                        <div className="flex space-x-4 items-center mb-2 md:mb-0 ">
-                            <ul className="flex items-end sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
-                                <li className="flex items-center  pr-3 mr-3 lg:mr-0">
-                                    <Link href="tel:9741923310" className="flex items-center">
-                                        <FiPhoneCall className="mr-2 text-white" />
-                                        <span className="hover:text-white">+918378000052</span>
-                                    </Link>
-                                </li>
-                                <li className="flex items-center">
-                                    <FaRegEnvelope className="mr-2 text-white" />
-                                    <Link
-                                        href="mailto:info@uscargopackersandmovers.com"
-                                        className="hover:text-white"
-                                    >
-                                        gauallamilk@gmail.com
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div className="hidden md:flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
-
-
-                            <ul className="flex space-x-4 items-center">
-                                <li>
-                                    <Link
-                                        href="https://www.facebook.com/"
-                                        target="_blank"
-                                    >
-                                        <FaFacebookF className="hover:text-white" />
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href="https://twitter.com/"
-                                        target="_blank"
-                                    >
-                                        <FaTwitter className="hover:text-white" />
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href="https://www.instagram.com/"
-                                        target="_blank"
-                                    >
-                                        <FaInstagram className="hover:text-white" />
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href="https://www.linkedin.com/in/"
-                                        target="_blank"
-                                    >
-                                        <FaLinkedinIn className="hover:text-white" />
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href="https://www.youtube.com/"
-                                        target="_blank"
-                                    >
-                                        <FaYoutube className="hover:text-white" />
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
+    
 
       <div className="flex justify-between lg:justify-between items-center px-5 md:px-12 xl:px-32 py-2 md:py-4">
           
@@ -155,35 +84,27 @@ const Topbar = () => {
 
         <div className="flex items-center gap-x-5">
           <div className="hidden lg:flex items-center  gap-x-4">
-            <a href="tel:+918378000052" className=" flex px-4 py-2 rounded group transition-all duration-300  text-white items-center gap-x-2 font-semibold bg-[#1f8018] hover:bg-[#2a8e23]">
+            <a href="tel:+918378000052" className=" flex px-4 py-2 rounded  text-white items-center gap-x-2 font-semibold bg-[#1f8018] hover:bg-[#2a8e23]">
               {" "}
-              <IoMdCall className=" text-2xl animate-bounce" /> +91 8378 000052
+              <IoMdCall className=" text-2xl " /> +91 8378 000052
             </a>
-            <a href="tel:+918378000052" className="flex px-4 py-2 rounded group transition-all duration-300  text-white items-center gap-x-2 font-semibold bg-[#1f8018] hover:bg-[#2a8e23]">
-              <FaWhatsapp className=" text-2xl animate-bounce " /> +91 8378 000052
+            <a href="tel:+918378000052" className="flex px-4 py-2 rounded  text-white items-center gap-x-2 font-semibold bg-[#1f8018] hover:bg-[#2a8e23]">
+              <FaWhatsapp className=" text-2xl  " /> +91 8378 000052
             </a>
             <span>|</span>
           </div>
           <div className="flex items-center gap-x-4">
-            <button className="hidden lg:flex items-center gap-x-2 bg-[#62371f] px-4 py-2 font-semibold text-white rounded group transition-all duration-300">
-              Get your trial Pack
-              <span className="  translate-x-0 opacity-50 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2">
-                <FaArrowRightLong />
-              </span>
-            </button>
-
-            {/* <button className="flex items-center gap-x-2 font-semibold">
-              <FaRegUser className="text-xl " /> Login
-              </button> */}
+          
               <div className="relative hidden lg:block ">
-              <button
-                onMouseEnter={() => setUserLinkToggle(true)}
+              <Link
+                // onMouseEnter={() => setUserLinkToggle(true)}
+                href="/user/login"
                 className="relative justify-center flex items-center gap-x-2 font-semibold"
               >
                 <FaRegUser className="hidden lg:block  text-3xl lg:text-xl cursor-pointer" />
                 Login
                 {userLinkToggle && <UserLinks />}
-              </button>
+              </Link>
             </div>
 
 

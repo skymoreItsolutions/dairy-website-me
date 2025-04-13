@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { FiHeart, FiShoppingCart } from "react-icons/fi";
+import ProductCard from "../Components/ProductCard";
 
 export default function page() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -44,95 +45,54 @@ export default function page() {
     },
   ];
 
-  const products = [
+  const healthyProducts = [
     {
-      id: 1,
-      name: "A2 Desi Cow Milk",
-      category: "milk",
-      price: 80,
-      originalPrice: 100,
-      description: "Pure and fresh A2 milk from indigenous cows",
-      image: "/images/cowmilk.jpeg",
-      isNew: true,
-      isBestOffer: true,
+      // img: "https://crm.swadeshivip.com/public/storage/product-variant/1727955027product-4020241003170027.webp",
+      img: "/images/banner/Gaualla3.webp",
+      title: "Fresh Milk",
+      quantity: "1L",
+      description: "Pure and organic farm-fresh milk for a healthy start.",
+      price: "₹50",
+      rating: 4.55,
     },
     {
-      id: 2,
-      name: "A2 Buffalo Milk",
-      category: "milk",
-      price: 90,
-      originalPrice: 110,
-      description: "Rich and creamy buffalo milk",
-      image: "/images/bufalomilk.jpeg",
-      isNew: true,
-      isBestOffer: false,
+      img: "/images/banner/Gaualla4.webp",
+      title: "Organic Cheese",
+      quantity: "250g",
+      description: "Rich and creamy cheese, made from pure cow milk.",
+      price: "₹120",
+      rating: 5.55,
+
     },
     {
-      id: 3,
-      name: "Pure Cow Ghee",
-      category: "ghee",
-      price: 850,
-      originalPrice: 1000,
-      description: "Traditional hand-churned ghee",
-      image: "/images/ghee1.png",
-      isNew: false,
-      isBestOffer: true,
+      img: "/images/banner/Gaualla4.webp",
+      title: "Natural Yogurt",
+      quantity: "500g",
+      description: "Delicious probiotic-rich yogurt for gut health.",
+      price: "₹80",
+      rating: 5.55,
+
     },
     {
-      id: 4,
-      name: "Pure Cow Ghee",
-      category: "paneer",
-      price: 320,
-      originalPrice: 400,
-      description: "Soft and fresh cottage cheese",
-      image: "/images/paneer.png",
-      isNew: false,
-      isBestOffer: false,
+      img: "/images/banner/Gaualla4.webp",
+      title: "Pure Butter",
+      quantity: "200g",
+      description: "Homemade-style butter, rich in flavor and nutrition.",
+      price: "₹150",
+      rating: 5.55,
+
     },
     {
-      id: 5,
-      name: "Wild Honey",
-      category: "honey",
-      price: 450,
-      originalPrice: 500,
-      description: "100% natural wild honey",
-      image: "/images/honey-1.png",
-      isNew: true,
-      isBestOffer: true,
+      // img: "https://crm.swadeshivip.com/public/storage/product-variant/1727955027product-4020241003170027.webp",
+      img: "/images/banner/Gaualla4.webp",
+
+      title: "Fresh Paneer",
+      quantity: "500g",
+      description: "Soft and fresh paneer, perfect for your favorite dishes.",
+      price: "₹200",
+      rating: 5.55,
+
     },
-    // {
-    //   id: 6,
-    //   name: "Curd",
-    //   category: "other",
-    //   price: 60,
-    //   originalPrice: 80,
-    //   description: "Fresh homemade curd",
-    //   image: "https://images.unsplash.com/photo-1553787499-6f5f32b05732",
-    //   isNew: false,
-    //   isBestOffer: false,
-    // },
-    // {
-    //   id: 7,
-    //   name: "Flavored Milk",
-    //   category: "milk",
-    //   price: 50,
-    //   originalPrice: 70,
-    //   description: "Delicious flavored milk",
-    //   image: "https://images.unsplash.com/photo-1563636626-507789b2530a",
-    //   isNew: true,
-    //   isBestOffer: false,
-    // },
-    // {
-    //   id: 8,
-    //   name: "Organic Ghee",
-    //   category: "ghee",
-    //   price: 900,
-    //   originalPrice: 1100,
-    //   description: "Organic hand-churned ghee",
-    //   image: "https://images.unsplash.com/photo-1631149750107-3c3ecc2b0333",
-    //   isNew: false,
-    //   isBestOffer: true,
-    // },
   ];
 
   useEffect(() => {
@@ -142,7 +102,7 @@ export default function page() {
     return () => clearInterval(timer);
   }, [categories.length]);
 
-  const filteredProducts = products.filter((product) =>
+  const filteredProducts = healthyProducts.filter((product) =>
     selectedCategory === "all" ? true : product.category === selectedCategory
   );
 
@@ -320,62 +280,15 @@ export default function page() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sortedProducts.map((product) => (
-            <div
-              key={product.id}
-              className="bg-[#F2F4F7] h-[300px] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 relative " // Increased height
-            >
-              <div className="w-full flex items-center justify-center">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-32 "
-                />
-              </div>
+            {
+              healthyProducts.map((data,ind)=>{
+                return(<>
 
-              {product.isNew && (
-                <span className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-full text-sm">
-                  NEW
-                </span>
-              )}
-              {product.isBestOffer && (
-                <span className="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded-full text-sm">
-                  BEST OFFER
-                </span>
-              )}
-              <div className="p-6 flex flex-col justify-between h-[190px]">
-                {" "}
-     
-                <div>
-                  <h3 className="text-lg font-semibold text-[#8B4513] mb-2">
-                    {product.name}
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                    {product.description}
-                  </p>
-                </div>
-                <div>
-                  <div className="flex justify-between items-center mb-4">
-                    <div>
-                      <span className="text-xl font-semibold text-[#8B4513]">
-                        ₹{product.price}
-                      </span>
-                      <span className="text-sm line-through text-gray-500 ml-2">
-                        ₹{product.originalPrice}
-                      </span>
-                    </div>
-                   
-                  </div>
-                  <button
-                    onClick={() => addToCart(product)}
-                    className="w-full bg-[#8B4513] text-white px-4 py-2 rounded-lg hover:bg-[#D2B48C] transition duration-300 flex items-center justify-center gap-2"
-                  >
-                    <FiShoppingCart /> Add to Cart
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
+                <ProductCard product={data}  />
+                
+                </>)
+              })
+            }
         </div>
       </div>
 

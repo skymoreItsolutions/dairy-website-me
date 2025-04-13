@@ -10,7 +10,7 @@ export default function HealtySection() {
   const healthyProducts = [
     {
       // img: "https://crm.swadeshivip.com/public/storage/product-variant/1727955027product-4020241003170027.webp",
-      img:"/images/banner/Gaualla3.webp",
+      img: "/images/banner/Gaualla3.webp",
       title: "Fresh Milk",
       quantity: "1L",
       description: "Pure and organic farm-fresh milk for a healthy start.",
@@ -18,7 +18,7 @@ export default function HealtySection() {
       rating: 4.55,
     },
     {
-      img:"/images/banner/Gaualla4.webp",
+      img: "/images/banner/Gaualla4.webp",
       title: "Organic Cheese",
       quantity: "250g",
       description: "Rich and creamy cheese, made from pure cow milk.",
@@ -27,7 +27,7 @@ export default function HealtySection() {
 
     },
     {
-      img:"/images/banner/Gaualla4.webp",
+      img: "/images/banner/Gaualla4.webp",
       title: "Natural Yogurt",
       quantity: "500g",
       description: "Delicious probiotic-rich yogurt for gut health.",
@@ -36,7 +36,7 @@ export default function HealtySection() {
 
     },
     {
-      img:"/images/banner/Gaualla4.webp",
+      img: "/images/banner/Gaualla4.webp",
       title: "Pure Butter",
       quantity: "200g",
       description: "Homemade-style butter, rich in flavor and nutrition.",
@@ -46,7 +46,7 @@ export default function HealtySection() {
     },
     {
       // img: "https://crm.swadeshivip.com/public/storage/product-variant/1727955027product-4020241003170027.webp",
-      img:"/images/banner/Gaualla4.webp",
+      img: "/images/banner/Gaualla4.webp",
 
       title: "Fresh Paneer",
       quantity: "500g",
@@ -66,28 +66,28 @@ export default function HealtySection() {
 
         <div className=" mt-8  ">
           <div className="">
-          <Swiper
-            className="w-full"
+            <Swiper
+              className="w-full"
 
-  slidesPerView={4}
-  spaceBetween={20}
-  autoplay={{ delay: 3000, disableOnInteraction: false }}
-  
-  loop={true}
-  modules={[Autoplay]}
-  breakpoints={{
-    320: { slidesPerView: 1, spaceBetween: 10 }, // Mobile: 1 slide
-    480: { slidesPerView: 2, spaceBetween: 15 }, // Small devices
-    768: { slidesPerView: 3, spaceBetween: 15 }, // Tablets
-    1024: { slidesPerView: 4, spaceBetween: 20 }, // Desktops
-  }}
->
-  {healthyProducts.map((product, index) => (
-    <SwiperSlide key={index} className="h-full">
-    <ProductCard product={product}/>
-    </SwiperSlide>
-  ))}
-</Swiper>
+              slidesPerView={4}
+              spaceBetween={20}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+
+              loop={true}
+              modules={[Autoplay]}
+              breakpoints={{
+                320: { slidesPerView: 1, spaceBetween: 10 }, // Mobile: 1 slide
+                480: { slidesPerView: 2, spaceBetween: 15 }, // Small devices
+                768: { slidesPerView: 3, spaceBetween: 15 }, // Tablets
+                1024: { slidesPerView: 4, spaceBetween: 20 }, // Desktops
+              }}
+            >
+              {healthyProducts.map((product, index) => (
+                <SwiperSlide key={index} className="h-full">
+                  <ProductCard product={product} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
 
           </div>
         </div>

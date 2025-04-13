@@ -24,6 +24,7 @@ import GalleryInfo from "./Components/GalleryInfo";
 import LatestBlog from "./Components/LatestBlog";
 import ProductionCounter from "./Components/ProductionCounter";
 import GetApp from "./Components/GetApp";
+import { CertificationSlider } from "./Components/CertificationSlider";
 
 const page = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -47,6 +48,7 @@ const page = () => {
         <HeroSection/>
         <FarmFreshProducts/>
         <Offers/>
+        <CertificationSlider/>
         <HealtySection/>
         <HeartSays/>
         <LatestBlog/>

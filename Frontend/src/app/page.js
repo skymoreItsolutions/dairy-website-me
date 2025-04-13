@@ -42,11 +42,7 @@ const page = () => {
 
   return (
     <>
-      {/* <div>
-        <PopupForm isOpen={isPopupOpen} closePopup={closePopup} />
-      </div> */}
-        
-        {/* <BannerSection/> */}
+
         <MainHeroSection/>
         <HeroSection/>
         <FarmFreshProducts/>
@@ -56,20 +52,10 @@ const page = () => {
         <LatestBlog/>
         <Testmonials/>
         <WhyCoose/>
-        <GetApp/>
+        {/* <GetApp/> */}
         <ProductionCounter/>
 
-      {/* <SliderImage /> */}
-      {/* <BenefitsSection />
-      <PopularCategories />
-      <Herotop />
-      <BlogSection />
-      <Contribution /> */}
-
-
-      {/* not */}
-      {/* <LatestNews /> */} 
-      {/* <BlogCardGrid/> */}
+      
     </>
   );
 };

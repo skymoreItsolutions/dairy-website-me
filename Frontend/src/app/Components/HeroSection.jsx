@@ -8,11 +8,11 @@ export default function HeroSection() {
   const sweiperImg = [
    
     {
-      img:"/images/banner/Gaualla5.webp"
+      img:"/images/banner-1.jpeg"
 
     },
     {
-      img:"/images/banner/Gaualla10.webp"
+      img:"/images/banner-2.jpeg"
 
     },
     {
@@ -51,7 +51,7 @@ export default function HeroSection() {
                 <img
                   src={img.img}
                   alt=""
-                  className="w-full min-h-[250px] max-h-[280px] lg:max-h-[330px] xl:max-h-[450px] rounded-lg"
+                  className="w-full h-[570px] rounded-lg"
                 />
               </SwiperSlide>
             ))}
@@ -63,7 +63,7 @@ export default function HeroSection() {
           <div className="h-1/2">
             <img
               // src="https://pravarshaindustries.com/storage/banners/8RMnh6dus8t0h0pLEKWh0itHnmd09MdNl6VZN0kr.png"
-              src="/images/banner/Gaualla11.webp"
+              src="/images/a2-dahi-banner.jpeg"
               alt=""
               className="w-full h-full object-cover rounded-lg"
             />
@@ -71,7 +71,7 @@ export default function HeroSection() {
           <div className="h-1/2">
             <img
               // src="https://pravarshaindustries.com/storage/banners/zmOVga9kVNmsscYPpcM0QaQPpnGmj9litUULOd40.png"
-             src="/images/banner/Gaualla12.webp"
+             src="/images/a2-dahi-banner.jpeg"
 
             alt=""
               className="w-full h-full object-cover rounded-lg"

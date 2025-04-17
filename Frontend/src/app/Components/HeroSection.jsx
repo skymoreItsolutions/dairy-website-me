@@ -51,7 +51,7 @@ export default function HeroSection() {
                 <img
                   src={img.img}
                   alt=""
-                  className="w-full h-[570px] rounded-lg"
+                  className="w-full h-[300px] lg:h-[570px] rounded-lg"
                 />
               </SwiperSlide>
             ))}

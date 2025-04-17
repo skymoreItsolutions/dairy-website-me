@@ -94,33 +94,34 @@ export default function Navbar() {
           </div>
 
           <ul className="flex pl-2 md:pl-5 flex-col items-start gap-y-5 mt-8 gap-x-5">
-            {navLinks.map((elm, index) => (
-              <li key={index} className="relative font-bold">
-                {elm.productList ? (
-                  <>
-                    <div className="flex items-center justify-between">
-                      <Link
-                       href={elm.link}
-                        className="flex items-center gap-x-2"
-                      >
-                        {elm.label}
-                        <IoIosArrowDown
-                          className={`transition-transform duration-300 ${
-                            openDropdown ? "rotate-180" : "rotate-0"
-                          }`}
-                        />
-                      </Link>
-                    </div>
-                 
-                  </>
-                ) : (
-                  <Link href={elm.link}      onClick={() => closeMenuBar()} className="hover:text-gray-600">
-                    {elm.label}
-                  </Link>
-                )}
-              </li>
-            ))}
-          </ul>
+  {navLinks.map((elm, index) => (
+    <li
+      key={index}
+      className="relative font-bold border-b border-gray-300 pb-2 w-full"
+    >
+      {elm.productList ? (
+        <div className="flex items-center justify-between">
+          <Link
+            href={elm.link}
+            onClick={() => dispatch(toggleSidebar())}
+            className="flex items-center gap-x-2"
+          >
+            {elm.label}
+          </Link>
+        </div>
+      ) : (
+        <Link
+          href={elm.link}
+          onClick={() => closeMenuBar()}
+          className="hover:text-gray-600"
+        >
+          {elm.label}
+        </Link>
+      )}
+    </li>
+  ))}
+</ul>
+
         </div>
       </div>
     );

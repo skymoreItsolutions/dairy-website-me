@@ -43,27 +43,27 @@ export default function FarmFreshProducts() {
         </h6>
 
         <div className=" mt-8  ">
-          <Swiper className="mySwiper"  
-            
-  slidesPerView={1}
-  spaceBetween={20}
-  autoplay={{ delay: 3000, disableOnInteraction: false }}
-  
-  loop={true}
-  modules={[Autoplay]}
-  breakpoints={{
-    320: { slidesPerView: 1, spaceBetween: 10 }, // Mobile: 1 slide
-    480: { slidesPerView: 2, spaceBetween: 15 }, // Small devices
-    768: { slidesPerView: 3, spaceBetween: 15 }, // Tablets
-    1024: { slidesPerView: 6, spaceBetween: 20 }, // Desktops
-  }}
+          <Swiper className="mySwiper"
+
+            slidesPerView={1}
+            spaceBetween={20}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+
+            loop={true}
+            modules={[Autoplay]}
+            breakpoints={{
+              320: { slidesPerView: 2, spaceBetween: 10 }, // Mobile: 1 slide
+              480: { slidesPerView: 2, spaceBetween: 15 }, // Small devices
+              768: { slidesPerView: 3, spaceBetween: 15 }, // Tablets
+              1024: { slidesPerView: 6, spaceBetween: 20 }, // Desktops
+            }}
           >
             {products.map((item, index) => (
               <SwiperSlide key={index}>
                 <div key={index} className="flex flex-col items-center">
                   <Link
                     href="/"
-                    className="h-[200px] w-[200px] sm:h-[150px] sm:w-[150px] rounded-full bg-[#4b2b1910] flex items-center justify-center transition-transform duration-300 hover:scale-105 shadow-md"
+                    className="h-[140px] w-[140px] sm:h-[150px] sm:w-[150px] rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-105 shadow-md"
                   >
                     <img
                       src='https://placehold.co/100'

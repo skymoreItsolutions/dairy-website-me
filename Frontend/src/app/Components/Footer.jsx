@@ -2,14 +2,15 @@
 "use client";
 import Link from "next/link";
 import { RiInstagramFill } from "react-icons/ri";
-import { FaEnvelope, FaFacebook, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
+import { FaEnvelope, FaFacebook, FaMapMarkerAlt } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
-
+import { FaShoppingBasket } from "react-icons/fa";
+import { FaHome, FaInfoCircle, FaBoxOpen, FaBlog, FaPhone } from "react-icons/fa"
 export default function Footer() {
   return (
     <>
-      <section className="bg-[#355e32] pt-24 pb-10  sm:py-10 md:py-16 lg:pb-0 lg:pt-18 relative">
+      <section className="bg-[#355e32] pt-24 pb-8  sm:py-10 md:py-16 lg:pb-0 lg:pt-18 relative">
         <img
           src="/images/footer/newbg.png"
           alt="footer-bg"
@@ -29,7 +30,7 @@ export default function Footer() {
                   />
                 </Link>
               </div>
-              <p className="text-[#b0b9ae] mb-6 text-sm md:text-base">
+              <p className="text-white mb-6 text-sm md:text-base">
                 "At Gaualla Thata, we combine purity with tradition to deliver fresh, wholesome dairy products that embody natural goodness and exceptional quality."
               </p>
               <div className="flex space-x-4 text-white">
@@ -49,163 +50,124 @@ export default function Footer() {
 
 
             {/* for laptop  and tab */}
-                {/* product  */}
+            {/* product  */}
+
+            {/* Business Hours */}
+            <div className="hidden lg:block md:mb-16">
+              <div className="mb-6">
+                <h4 className="text-white text-xl font-semibold">Quick Links</h4>
+              </div>
+              <ul className="space-y-4 text-white">
+                <li className="flex items-center space-x-2">
+                  <FaHome />
+                  <a href="/" className="hover:underline">Home</a>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <FaInfoCircle />
+                  <a href="/about" className="hover:underline">About</a>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <FaBoxOpen />
+                  <a href="/products" className="hover:underline">Products</a>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <FaBlog />
+                  <a href="/blogs" className="hover:underline">Blogs</a>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <FaPhone />
+                  <a href="/contact-us" className="hover:underline">Contact</a>
+                </li>
+              </ul>
+            </div>
 
 
             <div className="hidden lg:block md:mb-16">
               <div className="mb-6">
                 <h4 className="text-white text-xl font-semibold">Our Products</h4>
               </div>
-              <ul className="space-y-2 text-[#b0b9ae] text-sm md:text-base">
-                <li>
-                  <Link href="#" className="hover:text-white hover:font-bold">
-                    Gaualla Milk
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white hover:font-bold">
-                    Gaualla Ghee
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white hover:font-bold">
-                    Gaualla Paneer
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white hover:font-bold">
-                    Gaualla Fresh Milk
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white hover:font-bold">
-                    Gaualla Curd
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white hover:font-bold">
-                    Gaualla Butter
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white hover:font-bold">
-                    Gaualla Cheese
-                  </Link>
-                </li>
+              <ul className="space-y-2 text-white text-sm md:text-base">
+                {[
+                  "A2 Ghee",
+                  "A2 Binola Ghee",
+                  "A2 Desi Cow Milk",
+                  "Standard Milk",
+                  "A2 Paneer",
+                  "A2 Dahi",
+                  "A2 Butter"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center space-x-2">
+                    <FaShoppingBasket className="text-white text-sm" />
+                    <Link href="#" className="hover:text-white hover:font-bold">
+                      {item}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
-         
 
-            {/* Business Hours */} 
-            <div className="hidden lg:block md:mb-16">
-              <div className="mb-6">
-                <h4 className="text-white text-xl font-semibold">Business Hours</h4>
-              </div>
-              <div className="mb-4">
-                <span className="text-[#b0b9ae]">Mon - Fri</span>
-                <p className="text-white mb-4">10:00 am to 06:00 pm</p>
-              </div>
-              <div className="mb-4">
-                <span className="text-[#b0b9ae]">Saturday (1st & 4th)</span>
-                <p className="text-white mb-4">08:00 am to 04:00 pm</p>
-              </div>
-              <div className="flex items-center">
-                <img
-                  src="/images/footer/sms.png"
-                  alt="footer-text"
-                  className="mr-3 w-6 h-6"
-                />
-                <div>
-                  <span className="text-[#b0b9ae]">Stay connected with us</span>
-                  <a
-                    href="tel:+918378000052"
-                    className="text-white hover:font-bold block"
-                  >
-                    +91 8378 000052
-                  </a>
+
+
+            {/* for mobile  */}
+            <div className="grid grid-cols-2 lg:hidden">
+              <div className=" lg:mb-16">
+                <div className="mb-6">
+                  <h4 className="text-white text-xl font-semibold">Our Products</h4>
                 </div>
-              </div>
-            </div>
+                <ul className="space-y-2 text-white text-sm md:text-base">
+                  {[
+                    "A2 Ghee",
+                    "A2 Binola Ghee",
+                    "A2 Desi Cow Milk",
+                    "Standard Milk",
+                    "A2 Paneer",
+                    "A2 Dahi",
+                    "A2 Butter"
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-center space-x-2">
+                      <FaShoppingBasket className="text-white text-sm" />
+                      <Link href="#" className="hover:text-white hover:font-bold">
+                        {item}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
 
-           {/* for mobile  */}
-           <div className="grid grid-cols-2 lg:hidden">
-           <div className=" lg:mb-16">
-              <div className="mb-6">
-                <h4 className="text-white text-xl font-semibold">Our Products</h4>
               </div>
-              <ul className="space-y-2 text-[#b0b9ae] text-sm md:text-base">
-                <li>
-                  <Link href="#" className="hover:text-white hover:font-bold">
-                    Gaualla Milk
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white hover:font-bold">
-                    Gaualla Ghee
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white hover:font-bold">
-                    Gaualla Paneer
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white hover:font-bold">
-                    Gaualla Fresh Milk
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white hover:font-bold">
-                    Gaualla Curd
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white hover:font-bold">
-                    Gaualla Butter
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white hover:font-bold">
-                    Gaualla Cheese
-                  </Link>
-                </li>
-              </ul>
-            </div>
 
-         
 
-            {/* Business Hours */} 
-            <div className=" lg:mb-16">
-              <div className="mb-6">
-                <h4 className="text-white text-xl font-semibold">Business Hours</h4>
-              </div>
-              <div className="mb-4">
-                <span className="text-[#b0b9ae]">Mon - Fri</span>
-                <p className="text-white mb-4">10:00 am to 06:00 pm</p>
-              </div>
-              <div className="mb-4">
-                <span className="text-[#b0b9ae]">Saturday (1st & 4th)</span>
-                <p className="text-white mb-4">08:00 am to 04:00 pm</p>
-              </div>
-              <div className="flex  items-center">
-                <img
-                  src="/images/footer/sms.png"
-                  alt="footer-text"
-                  className="mr-3 w-6 h-6 mb-10"
-                />
-                <div>
-                  <span className="text-[#b0b9ae]">Stay connected with us</span>
-                  <a
-                    href="tel:+918378000052"
-                    className="text-white hover:font-bold block"
-                  >
-                    +91 8378 000052
-                  </a>
+
+
+
+              <div className="lg:mb-16">
+                <div className="mb-6">
+                  <h4 className="text-white text-xl font-semibold">Quick Links</h4>
                 </div>
+                <ul className="space-y-4 text-white">
+                  <li className="flex items-center space-x-2">
+                    <FaHome />
+                    <a href="/" className="hover:underline">Home</a>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <FaInfoCircle />
+                    <a href="/about" className="hover:underline">About</a>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <FaBoxOpen />
+                    <a href="/products" className="hover:underline">Products</a>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <FaBlog />
+                    <a href="/blogs" className="hover:underline">Blogs</a>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <FaPhone />
+                    <a href="/contact-us" className="hover:underline">Contact</a>
+                  </li>
+                </ul>
               </div>
             </div>
-           </div>
 
             {/* Our Address */}
             <div className=" lg:mb-16 text-white">
@@ -213,30 +175,30 @@ export default function Footer() {
                 <h4 className="text-white text-xl font-semibold">Our Address</h4>
               </div>
 
-              <h6 className="text-lg text-[#b0b9ae]">Location</h6>
+              <h6 className="text-lg text-white">Location</h6>
               <p className="capitalize text-sm md:text-base flex items-start gap-x-2">
-              <FaMapMarkerAlt className="text-xl mt-1"/>    #Both No 7, Pocket C, Wave Estate, Sector 85, Mohali, 140306, India
+                <FaMapMarkerAlt className="text-xl mt-1" />    #Both No 7, Pocket C, Wave Estate, Sector 85, Mohali, 140306, India
               </p>
 
               <div className="flex flex-col mt-4 gap-y-2">
                 <a href="tel:+918378000052" className="text-sm md:text-base flex items-start gap-x-2">
-                <FaPhone className="text-lg mt-1"/>  +91 8378 000052
+                  <FaPhone className="text-lg mt-1" />  +91 8378 000052
                 </a>
                 <a href="mailto:info@Gaualla.com" className="text-sm md:text-base flex items-start gap-x-2">
-                 <FaEnvelope className="text-lg mt-1"/>  info@Gaualla.com
+                  <FaEnvelope className="text-lg mt-1" />  info@Gaualla.com
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Footer Bottom */}
-          <div className="py-6 relative z-10 ">
+
+          {/* <div className="py-2 relative z-10 ">
             <hr className="border-t-1 border-slate-700 mb-8" />
             <div className="md:flex flex-wrap lg:justify-between items-center text-sm text-white justify-center md">
-              <p className="text-center">
+              <p className="">
                 © {new Date().getFullYear()} Gaualla. All rights reserved.
               </p>
-              <p className="text-center">
+              <p className="">
                 <span className="flex justify-center">
                   Designed by&nbsp;
                   <a
@@ -254,7 +216,36 @@ export default function Footer() {
                 <Link href="/terms-conditions">Terms & Conditions</Link>
               </div>
             </div>
+          </div> */}
+
+          <hr className="my-6 border-gray-600 " />
+
+          <div className="md:flex justify-between items-center text-sm text-white pb-9">
+            <p className="text-center ">
+              ©️ {new Date().getFullYear()} Gaualla Milk . All rights reserved.
+              <span className="">
+                Designed by &nbsp;
+                <a href="https://skymoreitsolutions.com" target="_blank" rel="noopener noreferrer">
+                    Skymore IT Solutions ❤️
+                </a>
+              </span>
+            </p>
+            <div className="space-x-4 mb-2 text-center md md:mb-0">
+              <Link href="/privacy-policy" className="hover:underline">
+                Privacy Policy  |
+              </Link>
+              <Link href="/terms-and-conditions" className="hover:underline">
+                Terms & Conditions |
+              </Link>
+            
+            </div>
+            <p className="text-center md:hidden">
+            
+             
+            </p>
           </div>
+
+
         </div>
       </section>
     </>

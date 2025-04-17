@@ -8,12 +8,16 @@ import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import Link from "next/link";
 export default function MainHeroSection() {
   const heroSlider = [
-    
-      {
-        img: "/images/mainHero/3.webp",
-        heading: "Fresh from the Farm",
-        desc: "Experience the finest, freshest dairy products directly from trusted farms, delivering natural goodness in every bite.",
-      },
+    {
+      img: "/images/cow.jpg",
+      heading: "Quality Milk and Dairy",
+      desc: "Our milk and dairy products are produced with care, adhering to high standards of safety, quality, and animal welfare.",
+    },
+      // {
+      //   img: "/images/mainHero/3.webp",
+      //   heading: "Fresh from the Farm",
+      //   desc: "Experience the finest, freshest dairy products directly from trusted farms, delivering natural goodness in every bite.",
+      // },
       {
         img: "/images/mainHero/4.webp",
         heading: "Pure, Natural, and Fresh",
@@ -24,6 +28,8 @@ export default function MainHeroSection() {
         heading: "Quality Milk and Dairy",
         desc: "Our milk and dairy products are produced with care, adhering to high standards of safety, quality, and animal welfare.",
       },
+
+      
       // {
       //   img: "/images/mainHero/2.webp",
       //   heading: "Farm-Fresh Dairy Excellence",

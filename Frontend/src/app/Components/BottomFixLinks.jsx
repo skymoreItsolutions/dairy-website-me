@@ -15,13 +15,13 @@ export default function BottomFixLinks() {
       label: "Products",
     },
     {
-      link: "/cart",
+      link: "/about",
       icon: <IoCartSharp />,
       label: "Cart",
     },
    
     {
-       link: "/user/profile",
+       link: "/user/LOGIN",
       icon: <AiOutlineAlignRight />,
       label: "Account",
     },

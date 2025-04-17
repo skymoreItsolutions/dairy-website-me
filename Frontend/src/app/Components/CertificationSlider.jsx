@@ -48,7 +48,7 @@ export const CertificationSlider = (props) => {
    <>
   <div className="w-full bg-white py-10">
       <h2 className="text-center text-3xl font-bold mb-8">Our Certifications</h2>
-      <div className="flex justify-center gap-5">
+      <div className="flex justify-center flex-wrap  gap-5">
         {getVisibleImages().map((img, index) => (
           <img
             key={index}

@@ -90,9 +90,9 @@ export default function HeartSays() {
             </div>
           </div>
           <div className="lg:col-span-2">
-            <div className=" h-full flex items-start lg:items-center xl:items-start">
+            <div className=" h-full flex items-start justify-center lg:items-center xl:items-start">
                 {/* <img src="https://crm.swadeshivip.com/storage/images/uploads/image_20241203_115727.png" alt="" className="w-[70%]  md:w-[40%] lg:w-[80%] xl:w-[70%] mx-auto" /> */}
-              <img src="/images/banner/gaualla4.webp" alt="" />
+              <img src="/images/dudu.png" alt="" />
             </div>
           </div>
           <div className="lg:col-span-1">

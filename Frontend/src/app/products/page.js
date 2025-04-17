@@ -211,60 +211,28 @@ export default function page() {
   );
 
   return (
-    <div className="px-5 lg:px-28 min-h-screen bg-white">
-      {/* <nav className="bg-[#D2B48C] p-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-semibold text-[#8B4513]">
-            Dairy Products
-          </h1>
-          <div className="flex items-center space-x-4">
-            <button className="text-[#8B4513]">
-              <FiHeart size={24} />
-            </button>
-            <button
-              onClick={() => setShowCart(true)}
-              className="text-[#8B4513] relative"
-            >
-              <FiShoppingCart size={24} />
-              {cart.length > 0 && (
-                <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
-                  {cart.length}
-                </span>
-              )}
-            </button>
-          </div>
+    <div className="min-h-screen bg-white">
+
+      <div
+        className="relative w-full h-[250px] lg:h-[350px] bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/aboutus.webp')" }}
+      >
+
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h2 className="text-white text-3xl md:text-5xl font-bold">Product</h2>
         </div>
-      </nav> */}
+      </div>
 
-      <div className="container mx-auto px-4 py-8">
-        {/* Enhanced Category Selector */}
-        {/* <div className="mb-8 overflow-x-auto whitespace-nowrap pb-4 flex gap-4">
-          {categories.map((category, index) => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`relative flex-shrink-0 w-32 h-40 rounded-lg overflow-hidden transition-all duration-300 ${
-                selectedCategory === category.id
-                  ? "ring-4 ring-[#8B4513] scale-105 shadow-lg"
-                  : "opacity-75 hover:opacity-100 hover:scale-102"
-              }`}
-            >
-              <img
-                src={category.image}
-                alt={category.name}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                <span className="text-white font-semibold text-lg drop-shadow-lg">
-                  {category.name}
-                </span>
-              </div>
-            </button>
-          ))}
-        </div> */}
 
+
+
+
+      <div className="container mx-auto py-8 px-5 lg:px-28  ">
         <div className="flex justify-between items-center mb-8">
-          <h2 className="text-2xl font-semibold text-[#8B4513]">
+          <h2 className="text-xl lg:text-2xl font-semibold text-[#8B4513]">
             {categories.find((cat) => cat.id === selectedCategory)?.name}
           </h2>
           <select
@@ -280,15 +248,15 @@ export default function page() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {
-              healthyProducts.map((data,ind)=>{
-                return(<>
+          {
+            healthyProducts.map((data, ind) => {
+              return (<>
 
-                <ProductCard product={data}  />
-                
-                </>)
-              })
-            }
+                <ProductCard product={data} />
+
+              </>)
+            })
+          }
         </div>
       </div>
 

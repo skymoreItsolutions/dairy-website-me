@@ -72,7 +72,7 @@ const Topbar = () => {
     <>
     
 
-      <div className="flex justify-between lg:justify-between items-center px-5 md:px-12 xl:px-32 py-2 md:py-4">
+      <div className="flex justify-between sticky top-0 lg:justify-between bg-white items-center px-5 md:px-12 xl:px-32 py-2 md:py-4 z-[999]">
           
           <Link href='/'  className=" block" >
           <img

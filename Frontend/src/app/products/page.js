@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react";
 import { FiHeart, FiShoppingCart } from "react-icons/fi";
 import ProductCard from "../Components/ProductCard";
+import axios from "axios";
+import { baseurl } from "../Components/common/app";
 
 export default function page() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -210,6 +212,18 @@ export default function page() {
     </div>
   );
 
+ const [allproduct,setAllproduct]=useState();
+const fetallproduct=async()=>{
+const response= await axios.get(`${baseurl}/allproduct`)
+setAllproduct(response.data)
+}
+
+useEffect(()=>{
+  fetallproduct()
+},[])
+
+
+
   return (
     <div className="min-h-screen bg-white">
 
@@ -249,7 +263,7 @@ export default function page() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {
-            healthyProducts.map((data, ind) => {
+            allproduct?.map((data, ind) => {
               return (<>
 
                 <ProductCard product={data} />

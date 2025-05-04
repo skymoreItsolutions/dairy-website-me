@@ -1,9 +1,12 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
 import ProductCard from "./ProductCard";
+import axios from "axios";
+import { baseurl } from "./common/app";
 
 
 export default function HealtySection() {
@@ -57,6 +60,19 @@ export default function HealtySection() {
     },
   ];
 
+  const [allproduct,setAllProduct]=useState()
+  
+  const fetchtype=async()=>{
+    const response = await axios.get(`${baseurl}/allproduct`)
+    setAllProduct(response.data)
+  }
+  
+  useEffect(()=>{
+    fetchtype()
+  },[])
+  
+  console.log(allproduct)
+
   return (
     <>
       <div className="px-5 md:px-12 xl:px-32  py-5 md:py-10  ">
@@ -82,7 +98,7 @@ export default function HealtySection() {
                 1024: { slidesPerView: 4, spaceBetween: 20 }, // Desktops
               }}
             >
-              {healthyProducts.map((product, index) => (
+              {allproduct?.map((product, index) => (
                 <SwiperSlide key={index} className="h-full">
                   <ProductCard product={product} />
                 </SwiperSlide>

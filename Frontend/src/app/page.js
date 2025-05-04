@@ -25,6 +25,8 @@ import LatestBlog from "./Components/LatestBlog";
 import ProductionCounter from "./Components/ProductionCounter";
 import GetApp from "./Components/GetApp";
 import { CertificationSlider } from "./Components/CertificationSlider";
+import axios from "axios";
+import { baseurl } from "./Components/common/app";
 
 const page = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -40,6 +42,20 @@ const page = () => {
   const closePopup = () => {
     setIsPopupOpen(false);
   };
+
+  const [bannerinfo,setBannerInfo]=useState()
+
+
+  const fetchbannerinfo=async()=>{
+    const res= await axios.get(`${baseurl}/getbanner`)
+    setBannerInfo(res.data)
+  }
+
+useEffect(()=>{
+fetchbannerinfo()
+},[])
+console.log(bannerinfo,"banner")
+
 
   return (
     <>

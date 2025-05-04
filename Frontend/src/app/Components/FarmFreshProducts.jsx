@@ -1,39 +1,29 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay } from "swiper/modules";
+import axios from "axios";
+import { baseurl, imgurl } from "./common/app";
 
 
 export default function FarmFreshProducts() {
-  const products = [
-    {
-      src: "https://pravarshaindustries.com/storage/subcategories/RoGa67tN2sfhnQNoXXKpQgZdZMkXJQWdwk8LEuiW.png",
-      alt: "milk",
-    },
-    {
-      src: "https://pravarshaindustries.com/storage/subcategories/Zqwvc1A4oZQSr3lLpMOlX8odAYtjXbOnyueUdcG1.png",
-      alt: "Ghee",
-    },
-    {
-      src: "https://pravarshaindustries.com/storage/subcategories/fSwtVeBVIXuSjbOx708FKP5mF3ehgCZVlS3wuUGJ.png",
-      alt: "panner",
-    },
-    {
-      src: "https://pravarshaindustries.com/storage/subcategories/LosArkXiOtsKDygwuXk6lEHmsOMvlh3NME6WcRQy.png",
-      alt: "curd",
-    },
-    {
-      src: "https://pravarshaindustries.com/storage/subcategories/9oAAGs0MVsEGL5R3N4miPzPE9YR3Nhadwf9vvR5O.png",
-      alt: "buttermilk",
-    },
-    {
-      src: "https://pravarshaindustries.com/storage/subcategories/DcI6c6kqlRksHXcAE3kASEP9uUeZHF4pdguDMA1K.webp",
-      alt: "combo",
-    },
-  ];
+
+
+const [productType,setProductType]=useState()
+
+const fetchtype=async()=>{
+  const response = await axios.get(`${baseurl}/allproduct-type`)
+  setProductType(response.data)
+}
+
+useEffect(()=>{
+  fetchtype()
+},[])
+
 
   return (
     <div className=" ">
@@ -58,21 +48,21 @@ export default function FarmFreshProducts() {
               1024: { slidesPerView: 6, spaceBetween: 20 }, // Desktops
             }}
           >
-            {products.map((item, index) => (
+            {productType?.map((item, index) => (
               <SwiperSlide key={index}>
                 <div key={index} className="flex flex-col items-center">
                   <Link
-                    href="/"
+                    href={`/${item?.title}`}
                     className="h-[140px] w-[140px] sm:h-[150px] sm:w-[150px] rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-105 shadow-md"
                   >
                     <img
-                      src='https://placehold.co/100'
-                      alt={item.alt}
+                      src={`${imgurl}/${item?.image}`}
+                      alt={item?.title}
                       className="w-[70%] h-[70%] lg:h-[75%] lg:w-[75%] rounded-full  object-contain object-center"
                     />
                   </Link>
                   <p className="text-center  mt-3 text-2xl font-bold md:text-xl uppercase  text-gray-700">
-                    {item.alt}
+                    {item?.title}
                   </p>
                 </div>
               </SwiperSlide>

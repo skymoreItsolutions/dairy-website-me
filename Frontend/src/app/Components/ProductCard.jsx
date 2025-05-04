@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaStar } from "react-icons/fa";
 import Link from 'next/link';
+import { imgurl } from './common/app';
 export default function ProductCard({product}) {
   return (
     <div
@@ -18,9 +19,9 @@ export default function ProductCard({product}) {
       {/* Image with Hover Effect */}
       <div className="overflow-hidden">
         <img
-          src={product.img}
-          alt={product.title}
-          className="w-full h-auto object-cover rounded-lg mb-2 md:mb-3 
+          src={`${imgurl}/${product?.images}`}
+          alt={product?.name}
+          className="w-full h-[400px]  object-contain rounded-lg mb-2 md:mb-3 
                      transition-transform duration-300 hover:scale-105"
         />
       </div>
@@ -29,21 +30,21 @@ export default function ProductCard({product}) {
         <div>
           <div className="text-sm md:text-lg font-semibold flex justify-between items-center">
             <h3>
-              {product.title} <span className="text-xs md:text-sm">{product.quantity}</span>
+              {product?.name} <span className="text-xs md:text-sm">{product?.quantity}{product?.quantity_type}</span>
             </h3>
             <span className="text-green-500 flex items-center text-xs">
-              <FaStar /> {product.rating}
+              <FaStar /> {product?.rating}
             </span>
           </div>
           <p className="font-bold mt-1 md:mt-2 flex items-baseline gap-x-2">
-            <span className="text-base text-gray-800 md:text-lg">{product.price}</span>
+            <span className="text-base text-gray-800 md:text-lg"> {product?.price}</span>
             <span className="text-[10px] md:text-xs line-through text-gray-700">
-              ₹{parseInt(product.price.replace("₹", "")) + 50}
+              ₹{parseInt(product?.price) + 30}
             </span>
           </p>
         </div>
 
-        <Link href={`/product-detail/${product.title.split(" ").join("-").toLowerCase()}`}
+        <Link href={`/product-detail/${product?.slug}`}
           className="w-full text-center mt-3 md:mt-4 gap-x-2 bg-[#1f8018] px-5 py-1.5 md:px-8 md:py-2 
                      font-semibold text-sm md:text-lg text-white rounded 
                      group transition-all duration-300 hover:bg-[#4A7D46] 

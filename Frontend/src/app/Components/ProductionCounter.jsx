@@ -24,7 +24,7 @@ export default function ProductionCounter() {
           <h3 className='text-2xl md:text-3xl xl:text-5xl font-bold text-green-700'>
             {productSale} K+
           </h3>
-          <p cl>Product Sale</p>
+          <p className=''>Product Sale</p>
         </div>
         <div className='flex flex-col items-center'>
           <h3 className='text-2xl md:text-3xl xl:text-5xl font-bold text-green-700'>

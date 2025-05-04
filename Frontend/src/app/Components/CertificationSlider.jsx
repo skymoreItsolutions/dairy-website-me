@@ -1,64 +1,52 @@
+'use client';
+
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/autoplay';
 
 
-import React,{useState,useEffect} from 'react'
+export const CertificationSlider = () => {
+  const images = [
+    "images/certificate-1.webp",
+    "images/certificate-2.webp",
+    "images/certificate-3.webp",
+    "images/certificate-4.webp",
+    "images/certificate-5.webp",
+    "images/certificate-6.webp",
 
+  ];
 
-export const CertificationSlider = (props) => {
-
-    const images = [
-        "https://placehold.co/400",
-        "https://placehold.co/400",
-        "https://placehold.co/400",
-        "https://placehold.co/400",
-        "https://placehold.co/400",
-        "https://placehold.co/200",
-        "https://placehold.co/200",
-        "https://placehold.co/200",
-        "https://placehold.co/200",
-        "https://placehold.co/300",
-        "https://placehold.co/300",
-        "https://placehold.co/200",
-    
-      ];
-
-    const [current, setCurrent] = useState(0);
-    const visibleCount = 6;
-  
-    useEffect(() => {
-      const interval = setInterval(() => {
-        setCurrent((prev) => (prev + visibleCount) % images.length);
-      }, 1000);
-      return () => clearInterval(interval);
-    }, []);
-  
-    // Handle wrap-around slicing
-    const getVisibleImages = () => {
-      if (current + visibleCount <= images.length) {
-        return images.slice(current, current + visibleCount);
-      } else {
-        return [
-          ...images.slice(current),
-          ...images.slice(0, (current + visibleCount) % images.length),
-        ];
-      }
-    };
-
-
-  return(
-   <>
-  <div className="w-full bg-white py-10">
+  return (
+    <div className="w-full bg-white py-10">
       <h2 className="text-center text-3xl font-bold mb-8">Our Certifications</h2>
-      <div className="flex justify-center flex-wrap  gap-5">
-        {getVisibleImages().map((img, index) => (
-          <img
-            key={index}
-            src={img}
-            alt={`cert-${index}`}
-            className="w-[150px] h-[150px] object-cover rounded-full shadow-md transition duration-500"
-          />
-        ))}
+      <div className="max-w-7xl mx-auto px-4">
+        <Swiper
+ 
+          slidesPerView={2}
+          spaceBetween={20}
+         autoplay={{ delay: 3000, disableOnInteraction: false }}
+      
+                    loop={true}
+                    modules={[Autoplay]}
+          breakpoints={{
+            640: { slidesPerView: 3 },
+            768: { slidesPerView: 4 },
+            1024: { slidesPerView: 5 },
+          }}
+        >
+          {images.map((img, index) => (
+            <SwiperSlide key={index} className="!flex justify-center">
+              <img
+                src={img}
+                alt={`cert-${index}`}
+                className=" w-[100px] h-[100px] lg:w-[160px] lg:h-[160px] "
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
-   </>
-   )
-  }
+  );
+};

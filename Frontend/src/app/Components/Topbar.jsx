@@ -78,7 +78,7 @@ const Topbar = () => {
           <img
           src="/images/logo.png"
           alt=""
-          className="h-[60px] object-cover object-center"
+          className="h-[86px] object-cover object-center"
         />
           </Link>
 

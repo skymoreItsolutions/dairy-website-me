@@ -1,23 +1,24 @@
-import React from 'react';
+"use client"
+import axios from 'axios';
+import React, { useState ,useEffect} from 'react';
+import { baseurl, imgurl } from './common/app';
 
 export default function LatestBlog() {
-  const blogData = [
-    {
-      img: "/images/blogs/1.webp",
-      date: "March 29, 2025",
-      heading: "Exploring the Benefits of Organic Dairy Products",
-    },
-    {
-      img: "/images/blogs/2.webp",
-      date: "March 28, 2025",
-      heading: "How Sattvic Cow Milk Enhances Your Health",
-    },
-    {
-      img: "/images/blogs/3.webp",
-      date: "March 27, 2025",
-      heading: "The Importance of Sustainable Dairy Farming Practices",
-    },
-  ];
+
+
+  const [allBlog,setAllblog]=useState()
+
+  const fetchetblog= async()=>{
+    const response = await axios.get(`${baseurl}/randomblog`)
+    setAllblog(response.data)
+  }
+  
+  useEffect(()=>{
+  fetchetblog()
+  },[])
+
+
+  
 
   return (
     <div className="latestBlogs relative lg:mt-20 bg-[#997c64] text-white">
@@ -32,16 +33,16 @@ export default function LatestBlog() {
         </div>
 
         <div className="mt-5 md:mt-12 grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-8 lg:gap-5 lg:grid-cols-3 relative">
-          {blogData.map((elm, index) => (
+          {allBlog?.map((elm, index) => (
             <div key={index} className="relative h-[400px] bg-white rounded-lg overflow-hidden shadow-lg transform transition-all hover:scale-105 duration-300">
               <img
-                src={elm.img}
+                src={`${imgurl}/${elm.thumbnail}`}
                 alt="blog"
                 className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
               />
               <div className="absolute bottom-0 p-6 bg-gradient-to-t from-black to-transparent w-full text-white">
                 <p className="text-sm mb-2">{elm.date}</p>
-                <h4 className="font-bold text-xl md:text-2xl">{elm.heading}</h4>
+                <h4 className="font-bold text-xl md:text-2xl">{elm.title}</h4>
               </div>
             </div>
           ))}

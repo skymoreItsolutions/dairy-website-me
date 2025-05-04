@@ -1,7 +1,9 @@
 'use client'
 
 
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { baseurl, imgurl } from "../Components/common/app";
 
 const blogs = [
   { id: 1, title: "Next.js & Tailwind CSS Guide", desc: "Learn how to style Next.js apps with Tailwind CSS.", image: "https://placehold.co/400" },
@@ -33,7 +35,17 @@ const BlogSection = () => {
   const currentBlogs = blogs.slice(indexOfFirstBlog, indexOfLastBlog);
 
   const totalPages = Math.ceil(blogs.length / blogsPerPage);
+const [allBlog,setAllblog]=useState()
 
+const fetchetblog= async()=>{
+  const response = await axios.get(`${baseurl}/allblog`)
+  setAllblog(response.data)
+}
+
+useEffect(()=>{
+fetchetblog()
+},[])
+console.log(allBlog)
   return (
      <>
 
@@ -55,18 +67,18 @@ const BlogSection = () => {
 
 <div className="p-6 max-w-7xl mx-auto">
       <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
-        {currentBlogs.map((blog) => (
+        {allBlog?.map((blog) => (
           <div key={blog.id} className="bg-white shadow-lg w-auto h-auto rounded-lg overflow-hidden">
-            <img src={blog.image} alt={blog.title} className="w-full object-cover" />
+            <img src={`${imgurl}/${blog?.thumbnail}`} alt={blog.title} className="w-full object-cover" />
             <div className="p-4">
-              <h3 className="text-xl font-semibold">{blog.title}</h3>
-              <p className="text-gray-600 mt-2">{blog.desc}</p>
+              <h3 className="text-xl font-semibold">{blog?.title}</h3>
+              <p className="text-gray-600 mt-2">{blog?.content}</p>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="flex justify-center mt-6">
+      {/* <div className="flex justify-center mt-6">
         {Array.from({ length: totalPages }, (_, index) => (
           <button
             key={index}
@@ -78,7 +90,7 @@ const BlogSection = () => {
             {index + 1}
           </button>
         ))}
-      </div>
+      </div> */}
     </div>
      
      </>

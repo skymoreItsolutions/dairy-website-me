@@ -62,8 +62,8 @@ console.log(bannerinfo,"banner")
 
         <MainHeroSection/>
         <HeroSection/>
-        <FarmFreshProducts/>
-        <Offers/>
+        {/* <FarmFreshProducts/>safa */}
+        {/* <Offers/> */}
         <CertificationSlider/>
         <HealtySection/>
         <HeartSays/>

@@ -21,7 +21,7 @@ export default function BottomFixLinks() {
     },
    
     {
-       link: "/user/LOGIN",
+       link: "/user/login",
       icon: <AiOutlineAlignRight />,
       label: "Account",
     },
